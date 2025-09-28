@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TradeGuard AI - Revolutionizing Customs Compliance</title>
+    <meta name="description" content="AI-powered customs clearance platform enhancing efficiency 3-5x while reducing errors to <1%. Transform your trade compliance with our intelligent document processing system.">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+        .gradient-bg { background: linear-gradient(135deg, #1e3c72 0%, #2a5298 50%, #667eea 100%); }
+        .feature-card { transition: all 0.3s ease; }
+        .feature-card:hover { transform: translateY(-8px); box-shadow: 0 20px 40px rgba(0,0,0,0.1); }
+        .stats-counter { animation: countUp 2s ease-out forwards; }
+        @keyframes countUp { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+        .navbar-scroll { backdrop-filter: blur(10px); background-color: rgba(255, 255, 255, 0.95); }
+        .navbar-scroll .nav-text { color: #374151 !important; }
+        .navbar-scroll .nav-text:hover { color: #2563eb !important; }
+        .navbar-scroll .nav-brand { color: #1f2937 !important; }
+        .navbar-scroll .nav-select { color: #374151; border-color: #d1d5db; background-color: white; }
+        .nav-text { color: white !important; }
+        .nav-text:hover { color: #60a5fa !important; }
+        .nav-brand { color: white !important; }
+        .nav-select { color: white; border-color: rgba(255, 255, 255, 0.4); background-color: rgba(255, 255, 255, 0.15); }
+        .nav-select option { color: #1f2937; background-color: white; }
+    </style>
+</head>
+<body class="antialiased bg-white">
+
+<!-- Navigation -->
+<nav id="navbar" class="fixed w-full z-50 transition-all duration-300 py-4">
+    <div class="container mx-auto px-6">
+        <div class="flex justify-between items-center">
+            <div class="flex items-center space-x-2">
+                <div class="w-10 h-10 bg-gradient-to-br from-blue-600 to-purple-600 rounded-xl flex items-center justify-center">
+                    <i class="fas fa-brain text-white text-lg"></i>
+                </div>
+                <span class="text-xl font-bold nav-brand" data-translate="brand">TradeGuard AI</span>
+            </div>
+            
+            <div class="hidden md:flex space-x-8">
+                <a href="#home" class="nav-text hover:text-blue-300 font-medium transition-colors" data-translate="nav.home">Home</a>
+                <a href="features.html" class="nav-text hover:text-blue-300 font-medium transition-colors" data-translate="nav.features">Features</a>
+                <a href="architecture.html" class="nav-text hover:text-blue-300 font-medium transition-colors" data-translate="nav.architecture">Architecture</a>
+                <a href="solutions.html" class="nav-text hover:text-blue-300 font-medium transition-colors" data-translate="nav.solutions">Solutions</a>
+                <a href="pricing.html" class="nav-text hover:text-blue-300 font-medium transition-colors" data-translate="nav.pricing">Pricing</a>
+                <a href="about.html" class="nav-text hover:text-blue-300 font-medium transition-colors" data-translate="nav.about">About</a>
+                <a href="contact.html" class="nav-text hover:text-blue-300 font-medium transition-colors" data-translate="nav.contact">Contact</a>
+            </div>
+            
+            <div class="flex items-center space-x-4">
+                <!-- Language Selector -->
+                <div class="relative">
+                    <select id="languageSelector" class="nav-select bg-transparent rounded-lg px-3 py-2 text-sm focus:outline-none focus:border-blue-300 transition-colors">
+                        <option value="en">English</option>
+                        <option value="zh">中文</option>
+                        <option value="ja">日本語</option>
+                        <option value="vi">Tiếng Việt</option>
+                    </select>
+                </div>
+                
+                <button class="bg-blue-600 text-white px-6 py-2 rounded-lg font-medium hover:bg-blue-700 transition-colors" data-translate="nav.demo">
+                    Request Demo
+                </button>
+            </div>
+        </div>
+    </div>
+</nav>
+
+<!-- Hero Section -->
+<section id="home" class="gradient-bg min-h-screen flex items-center pt-20">
+    <div class="container mx-auto px-6">
+        <div class="grid lg:grid-cols-2 gap-12 items-center">
+            <div class="text-white">
+                <h1 class="text-5xl lg:text-6xl font-bold mb-6 leading-tight" data-translate="hero.title">
+                    AI-Powered Customs Clearance Revolution
+                </h1>
+                <p class="text-xl mb-8 text-blue-100" data-translate="hero.subtitle">
+                    Transform your trade compliance with our intelligent document processing system. Boost efficiency 3-5x while reducing errors to less than 1%.
+                </p>
+                
+                <div class="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4 mb-12">
+                    <button class="bg-white text-blue-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors" data-translate="hero.cta1">
+                        Start Free Trial
+                    </button>
+                    <button class="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors" data-translate="hero.cta2">
+                        Watch Demo
+                    </button>
+                </div>
+                
+                <!-- Key Stats -->
+                <div class="grid grid-cols-3 gap-8">
+                    <div class="stats-counter">
+                        <div class="text-3xl font-bold mb-2">3-5x</div>
+                        <div class="text-sm text-blue-100" data-translate="stats.efficiency">Efficiency Boost</div>
+                    </div>
+                    <div class="stats-counter">
+                        <div class="text-3xl font-bold mb-2">&lt;1%</div>
+                        <div class="text-sm text-blue-100" data-translate="stats.error">Error Rate</div>
+                    </div>
+                    <div class="stats-counter">
+                        <div class="text-3xl font-bold mb-2">98%</div>
+                        <div class="text-sm text-blue-100" data-translate="stats.accuracy">Data Accuracy</div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="relative">
+                <div class="bg-white rounded-2xl shadow-2xl p-8 transform rotate-3 hover:rotate-0 transition-transform duration-500">
+                    <div class="space-y-4">
+                        <div class="flex items-center space-x-3">
+                            <div class="w-3 h-3 bg-red-500 rounded-full"></div>
+                            <div class="w-3 h-3 bg-yellow-500 rounded-full"></div>
+                            <div class="w-3 h-3 bg-green-500 rounded-full"></div>
+                        </div>
+                        <div class="space-y-3">
+                            <div class="h-4 bg-gray-200 rounded animate-pulse"></div>
+                            <div class="h-4 bg-blue-200 rounded animate-pulse"></div>
+                            <div class="h-4 bg-gray-200 rounded animate-pulse"></div>
+                            <div class="h-8 bg-green-100 rounded-lg flex items-center px-4">
+                                <i class="fas fa-check-circle text-green-600 mr-2"></i>
+                                <span class="text-sm text-green-700">Document Processed Successfully</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Core Features Preview -->
+<section class="py-20 bg-gray-50">
+    <div class="container mx-auto px-6">
+        <div class="text-center mb-16">
+            <h2 class="text-4xl font-bold text-gray-800 mb-4" data-translate="features.title">
+                Core AI Capabilities
+            </h2>
+            <p class="text-xl text-gray-600 max-w-3xl mx-auto" data-translate="features.subtitle">
+                Our comprehensive AI platform addresses every aspect of customs document processing and risk management.
+            </p>
+        </div>
+        
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <!-- Feature 1 -->
+            <div class="feature-card bg-white rounded-xl p-8 shadow-lg">
+                <div class="w-16 h-16 bg-blue-100 rounded-xl flex items-center justify-center mb-6">
+                    <i class="fas fa-eye text-blue-600 text-2xl"></i>
+                </div>
+                <h3 class="text-xl font-semibold mb-4" data-translate="feature1.title">Multi-Modal Document Recognition</h3>
+                <p class="text-gray-600" data-translate="feature1.desc">Intelligent processing of PDFs, images, and scanned documents with 98%+ accuracy across all formats.</p>
+            </div>
+            
+            <!-- Feature 2 -->
+            <div class="feature-card bg-white rounded-xl p-8 shadow-lg">
+                <div class="w-16 h-16 bg-purple-100 rounded-xl flex items-center justify-center mb-6">
+                    <i class="fas fa-cogs text-purple-600 text-2xl"></i>
+                </div>
+                <h3 class="text-xl font-semibold mb-4" data-translate="feature2.title">Structured Data Processing</h3>
+                <p class="text-gray-600" data-translate="feature2.desc">Transform unstructured information into standardized, verified customs declaration elements.</p>
+            </div>
+            
+            <!-- Feature 3 -->
+            <div class="feature-card bg-white rounded-xl p-8 shadow-lg">
+                <div class="w-16 h-16 bg-red-100 rounded-xl flex items-center justify-center mb-6">
+                    <i class="fas fa-shield-alt text-red-600 text-2xl"></i>
+                </div>
+                <h3 class="text-xl font-semibold mb-4" data-translate="feature3.title">8-Dimension Risk Scanner</h3>
+                <p class="text-gray-600" data-translate="feature3.desc">Comprehensive risk analysis including HS code classification, pricing, consistency, and policy compliance.</p>
+            </div>
+        </div>
+        
+        <div class="text-center mt-12">
+            <a href="features.html" class="bg-blue-600 text-white px-8 py-4 rounded-lg font-semibold hover:bg-blue-700 transition-colors inline-flex items-center" data-translate="features.viewall">
+                View All Features
+                <i class="fas fa-arrow-right ml-2"></i>
+            </a>
+        </div>
+    </div>
+</section>
+
+<!-- CTA Section -->
+<section class="py-20 bg-blue-600">
+    <div class="container mx-auto px-6 text-center">
+        <h2 class="text-4xl font-bold text-white mb-4" data-translate="cta.title">
+            Ready to Transform Your Customs Operations?
+        </h2>
+        <p class="text-xl text-blue-100 mb-8 max-w-2xl mx-auto" data-translate="cta.subtitle">
+            Join leading customs brokers and enterprises who have revolutionized their compliance workflows with our AI platform.
+        </p>
+        <div class="space-x-4">
+            <button class="bg-white text-blue-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors" data-translate="cta.trial">
+                Start Free Trial
+            </button>
+            <button class="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors" data-translate="cta.contact">
+                Contact Sales
+            </button>
+        </div>
+    </div>
+</section>
+
+<!-- Footer -->
+<footer class="bg-gray-900 text-white py-16">
+    <div class="container mx-auto px-6">
+        <div class="grid md:grid-cols-4 gap-8">
+            <div>
+                <div class="flex items-center space-x-2 mb-4">
+                    <div class="w-10 h-10 bg-gradient-to-br from-blue-600 to-purple-600 rounded-xl flex items-center justify-center">
+                        <i class="fas fa-brain text-white text-lg"></i>
+                    </div>
+                    <span class="text-xl font-bold" data-translate="brand">TradeGuard AI</span>
+                </div>
+                <p class="text-gray-400" data-translate="footer.desc">
+                    Revolutionizing customs compliance through AI-powered automation and expert collaboration.
+                </p>
+            </div>
+            
+            <div>
+                <h4 class="font-semibold mb-4" data-translate="footer.product">Product</h4>
+                <ul class="space-y-2 text-gray-400">
+                    <li><a href="features.html" class="hover:text-white transition-colors" data-translate="nav.features">Features</a></li>
+                    <li><a href="architecture.html" class="hover:text-white transition-colors" data-translate="nav.architecture">Architecture</a></li>
+                    <li><a href="pricing.html" class="hover:text-white transition-colors" data-translate="nav.pricing">Pricing</a></li>
+                </ul>
+            </div>
+            
+            <div>
+                <h4 class="font-semibold mb-4" data-translate="footer.company">Company</h4>
+                <ul class="space-y-2 text-gray-400">
+                    <li><a href="about.html" class="hover:text-white transition-colors" data-translate="nav.about">About Us</a></li>
+                    <li><a href="contact.html" class="hover:text-white transition-colors" data-translate="nav.contact">Contact</a></li>
+                </ul>
+            </div>
+            
+            <div>
+                <h4 class="font-semibold mb-4" data-translate="footer.connect">Connect</h4>
+                <div class="flex space-x-4">
+                    <a href="#" class="w-10 h-10 bg-gray-700 rounded-full flex items-center justify-center hover:bg-gray-600 transition-colors">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                    <a href="#" class="w-10 h-10 bg-gray-700 rounded-full flex items-center justify-center hover:bg-gray-600 transition-colors">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="border-t border-gray-700 mt-12 pt-8 text-center text-gray-400">
+            <p>&copy; 2025 TradeGuard AI. All rights reserved.</p>
+        </div>
+    </div>
+</footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pricing - TradeGuard AI Platform</title>
+    <meta name="description" content="Transparent pricing for AI-powered customs compliance. Choose the plan that fits your business needs - Professional, Business, or Enterprise.">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+        .gradient-bg { background: linear-gradient(135deg, #1e3c72 0%, #2a5298 50%, #667eea 100%); }
+        .navbar-scroll { backdrop-filter: blur(10px); background-color: rgba(255, 255, 255, 0.95); }
+        .navbar-scroll .nav-text { color: #374151 !important; }
+        .navbar-scroll .nav-text:hover { color: #2563eb !important; }
+        .navbar-scroll .nav-active { color: #2563eb !important; }
+        .navbar-scroll .nav-brand { color: #1f2937 !important; }
+        .navbar-scroll .nav-select { color: #374151; border-color: #d1d5db; background-color: white; }
+        .nav-text { color: white !important; }
+        .nav-text:hover { color: #60a5fa !important; }
+        .nav-brand { color: white !important; }
+        .nav-select { color: white; border-color: rgba(255, 255, 255, 0.4); background-color: rgba(255, 255, 255, 0.15); }
+        .nav-select option { color: #1f2937; background-color: white; }
+        .pricing-card { transition: all 0.3s ease; }
+        .pricing-card:hover { transform: translateY(-8px); box-shadow: 0 20px 40px rgba(0,0,0,0.1); }
+        .featured { border: 2px solid #667eea; }
+    </style>
+</head>
+<body class="antialiased bg-white">
+
+<!-- Navigation -->
+<nav id="navbar" class="fixed w-full z-50 transition-all duration-300 py-4">
+    <div class="container mx-auto px-6">
+        <div class="flex justify-between items-center">
+            <div class="flex items-center space-x-2">
+                <div class="w-10 h-10 bg-gradient-to-br from-blue-600 to-purple-600 rounded-xl flex items-center justify-center">
+                    <i class="fas fa-brain text-white text-lg"></i>
+                </div>
+                <a href="index.html" class="text-xl font-bold nav-brand" data-translate="brand">TradeGuard AI</a>
+            </div>
+            
+            <div class="hidden md:flex space-x-8">
+                <a href="index.html" class="nav-text font-medium transition-colors" data-translate="nav.home">Home</a>
+                <a href="features.html" class="nav-text font-medium transition-colors" data-translate="nav.features">Features</a>
+                <a href="architecture.html" class="nav-text font-medium transition-colors" data-translate="nav.architecture">Architecture</a>
+                <a href="solutions.html" class="nav-text font-medium transition-colors" data-translate="nav.solutions">Solutions</a>
+                <a href="pricing.html" class="nav-text nav-active font-medium" data-translate="nav.pricing">Pricing</a>
+                <a href="about.html" class="nav-text font-medium transition-colors" data-translate="nav.about">About</a>
+                <a href="contact.html" class="nav-text font-medium transition-colors" data-translate="nav.contact">Contact</a>
+            </div>
+            
+            <div class="flex items-center space-x-4">
+                <div class="relative">
+                    <select id="languageSelector" class="nav-select bg-transparent rounded-lg px-3 py-2 text-sm focus:outline-none focus:border-blue-300 transition-colors">
+                        <option value="en">English</option>
+                        <option value="zh">中文</option>
+                        <option value="ja">日本語</option>
+                        <option value="vi">Tiếng Việt</option>
+                    </select>
+                </div>
+                <button class="bg-blue-600 text-white px-6 py-2 rounded-lg font-medium hover:bg-blue-700 transition-colors" data-translate="nav.demo">
+                    Request Demo
+                </button>
+            </div>
+        </div>
+    </div>
+</nav>
+
+<!-- Hero Section -->
+<section class="gradient-bg pt-28 pb-16">
+    <div class="container mx-auto px-6 text-center">
+        <h1 class="text-5xl font-bold text-white mb-6" data-translate="pricing.hero.title">
+            Simple, Transparent Pricing
+        </h1>
+        <p class="text-xl text-blue-100 max-w-3xl mx-auto" data-translate="pricing.hero.subtitle">
+            Choose the plan that scales with your business. All plans include our core AI features with transparent usage-based pricing.
+        </p>
+    </div>
+</section>
+
+<!-- Pricing Cards -->
+<section class="py-20 bg-gray-50">
+    <div class="container mx-auto px-6">
+        <div class="grid lg:grid-cols-3 gap-8">
+            <!-- Professional Plan -->
+            <div class="pricing-card bg-white rounded-2xl shadow-xl p-8">
+                <div class="text-center mb-8">
+                    <h3 class="text-2xl font-bold text-gray-800 mb-2" data-translate="pricing.professional.title">Professional</h3>
+                    <p class="text-gray-600 mb-6" data-translate="pricing.professional.desc">Perfect for small teams and growing brokers</p>
+                    <div class="text-4xl font-bold text-gray-800 mb-2">$250<span class="text-lg text-gray-600">/month</span></div>
+                    <p class="text-sm text-gray-500">Up to 3 users, 200 shipments/month</p>
+                </div>
+                
+                <ul class="space-y-4 mb-8">
+                    <li class="flex items-center space-x-3">
+                        <i class="fas fa-check text-green-600"></i>
+                        <span class="text-gray-700">Multi-modal document recognition</span>
+                    </li>
+                    <li class="flex items-center space-x-3">
+                        <i class="fas fa-check text-green-600"></i>
+                        <span class="text-gray-700">Basic risk scanning (4 dimensions)</span>
+                    </li>
+                    <li class="flex items-center space-x-3">
+                        <i class="fas fa-check text-green-600"></i>
+                        <span class="text-gray-700">Standard support</span>
+                    </li>
+                    <li class="flex items-center space-x-3">
+                        <i class="fas fa-check text-green-600"></i>
+                        <span class="text-gray-700">Basic analytics dashboard</span>
+                    </li>
+                    <li class="flex items-center space-x-3">
+                        <i class="fas fa-times text-gray-400"></i>
+                        <span class="text-gray-400">Advanced collaboration tools</span>
+                    </li>
+                    <li class="flex items-center space-x-3">
+                        <i class="fas fa-times text-gray-400"></i>
+                        <span class="text-gray-400">API access</span>
+                    </li>
+                </ul>
+                
+                <button class="w-full bg-gray-800 text-white py-3 px-6 rounded-lg font-semibold hover:bg-gray-900 transition-colors">
+                    Start Free Trial
+                </button>
+                
+                <p class="text-xs text-gray-500 mt-4 text-center">
+                    Additional shipments: $5 each
+                </p>
+            </div>
+            
+            <!-- Business Plan (Featured) -->
+            <div class="pricing-card bg-white rounded-2xl shadow-xl p-8 featured relative">
+                <div class="absolute -top-4 left-1/2 transform -translate-x-1/2">
+                    <span class="bg-blue-600 text-white px-6 py-2 rounded-full text-sm font-semibold" data-translate="pricing.business.popular">Most Popular</span>
+                </div>
+                
+                <div class="text-center mb-8">
+                    <h3 class="text-2xl font-bold text-gray-800 mb-2" data-translate="pricing.business.title">Business</h3>
+                    <p class="text-gray-600 mb-6" data-translate="pricing.business.desc">Ideal for mid-size brokers and enterprises</p>
+                    <div class="text-4xl font-bold text-gray-800 mb-2">$1,200<span class="text-lg text-gray-600">/month</span></div>
+                    <p class="text-sm text-gray-500">Up to 10 users, 1,500 shipments/month</p>
+                </div>
+                
+                <ul class="space-y-4 mb-8">
+                    <li class="flex items-center space-x-3">
+                        <i class="fas fa-check text-green-600"></i>
+                        <span class="text-gray-700">All Professional features</span>
+                    </li>
+                    <li class="flex items-center space-x-3">
+                        <i class="fas fa-check text-green-600"></i>
+                        <span class="text-gray-700">Full 8-dimension risk engine</span>
+                    </li>
+                    <li class="flex items-center space-x-3">
+                        <i class="fas fa-check text-green-600"></i>
+                        <span class="text-gray-700">Advanced collaboration tools</span>
+                    </li>
+                    <li class="flex items-center space-x-3">
+                        <i class="fas fa-check text-green-600"></i>
+                        <span class="text-gray-700">Priority support</span>
+                    </li>
+                    <li class="flex items-center space-x-3">
+                        <i class="fas fa-check text-green-600"></i>
+                        <span class="text-gray-700">Advanced analytics & reporting</span>
+                    </li>
+                    <li class="flex items-center space-x-3">
+                        <i class="fas fa-check text-green-600"></i>
+                        <span class="text-gray-700">Basic API access</span>
+                    </li>
+                </ul>
+                
+                <button class="w-full bg-blue-600 text-white py-3 px-6 rounded-lg font-semibold hover:bg-blue-700 transition-colors">
+                    Start Free Trial
+                </button>
+                
+                <p class="text-xs text-gray-500 mt-4 text-center">
+                    Additional shipments: $3 each
+                </p>
+            </div>
+            
+            <!-- Enterprise Plan -->
+            <div class="pricing-card bg-white rounded-2xl shadow-xl p-8">
+                <div class="text-center mb-8">
+                    <h3 class="text-2xl font-bold text-gray-800 mb-2">Enterprise</h3>
+                    <p class="text-gray-600 mb-6">For large organizations with custom needs</p>
+                    <div class="text-4xl font-bold text-gray-800 mb-2">Custom</div>
+                    <p class="text-sm text-gray-500">Unlimited users and shipments</p>
+                </div>
+                
+                <ul class="space-y-4 mb-8">
+                    <li class="flex items-center space-x-3">
+                        <i class="fas fa-check text-green-600"></i>
+                        <span class="text-gray-700">All Business features</span>
+                    </li>
+                    <li class="flex items-center space-x-3">
+                        <i class="fas fa-check text-green-600"></i>
+                        <span class="text-gray-700">Private cloud deployment</span>
+                    </li>
+                    <li class="flex items-center space-x-3">
+                        <i class="fas fa-check text-green-600"></i>
+                        <span class="text-gray-700">Full API suite & webhooks</span>
+                    </li>
+                    <li class="flex items-center space-x-3">
+                        <i class="fas fa-check text-green-600"></i>
+                        <span class="text-gray-700">Custom integrations</span>
+                    </li>
+                    <li class="flex items-center space-x-3">
+                        <i class="fas fa-check text-green-600"></i>
+                        <span class="text-gray-700">Dedicated customer success manager</span>
+                    </li>
+                    <li class="flex items-center space-x-3">
+                        <i class="fas fa-check text-green-600"></i>
+                        <span class="text-gray-700">24/7 premium support</span>
+                    </li>
+                </ul>
+                
+                <button class="w-full bg-gray-800 text-white py-3 px-6 rounded-lg font-semibold hover:bg-gray-900 transition-colors">
+                    Contact Sales
+                </button>
+                
+                <p class="text-xs text-gray-500 mt-4 text-center">
+                    Volume discounts available
+                </p>
+            </div>
+        </div>
+        
+        <!-- Additional Notes -->
+        <div class="mt-16 text-center">
+            <h3 class="text-2xl font-bold text-gray-800 mb-6">All Plans Include</h3>
+            <div class="grid md:grid-cols-4 gap-6">
+                <div class="text-center">
+                    <i class="fas fa-shield-alt text-blue-600 text-2xl mb-3"></i>
+                    <h4 class="font-semibold text-gray-800 mb-2">Enterprise Security</h4>
+                    <p class="text-sm text-gray-600">SOC 2 compliance and data encryption</p>
+                </div>
+                <div class="text-center">
+                    <i class="fas fa-cloud text-blue-600 text-2xl mb-3"></i>
+                    <h4 class="font-semibold text-gray-800 mb-2">Cloud Infrastructure</h4>
+                    <p class="text-sm text-gray-600">99.9% uptime SLA</p>
+                </div>
+                <div class="text-center">
+                    <i class="fas fa-graduation-cap text-blue-600 text-2xl mb-3"></i>
+                    <h4 class="font-semibold text-gray-800 mb-2">Training & Onboarding</h4>
+                    <p class="text-sm text-gray-600">Comprehensive team training included</p>
+                </div>
+                <div class="text-center">
+                    <i class="fas fa-sync text-blue-600 text-2xl mb-3"></i>
+                    <h4 class="font-semibold text-gray-800 mb-2">Regular Updates</h4>
+                    <p class="text-sm text-gray-600">Continuous AI model improvements</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- FAQ Section -->
+<section class="py-20 bg-white">
+    <div class="container mx-auto px-6">
+        <div class="text-center mb-16">
+            <h2 class="text-4xl font-bold text-gray-800 mb-4">Frequently Asked Questions</h2>
+            <p class="text-xl text-gray-600">Get answers to common questions about our pricing and platform.</p>
+        </div>
+        
+        <div class="max-w-4xl mx-auto space-y-8">
+            <div class="bg-gray-50 rounded-lg p-6">
+                <h3 class="text-lg font-semibold text-gray-800 mb-3">How is usage calculated?</h3>
+                <p class="text-gray-600">Usage is calculated per shipment processed through our system. Each shipment includes all related documents (invoice, packing list, certificates, etc.). Additional processing beyond your plan limits is charged per shipment.</p>
+            </div>
+            
+            <div class="bg-gray-50 rounded-lg p-6">
+                <h3 class="text-lg font-semibold text-gray-800 mb-3">Can I upgrade or downgrade my plan?</h3>
+                <p class="text-gray-600">Yes, you can change your plan at any time. Upgrades take effect immediately, while downgrades take effect at the next billing cycle. We'll prorate any differences in pricing.</p>
+            </div>
+            
+            <div class="bg-gray-50 rounded-lg p-6">
+                <h3 class="text-lg font-semibold text-gray-800 mb-3">What's included in the free trial?</h3>
+                <p class="text-gray-600">The free trial includes full access to your chosen plan for 14 days, including up to 50 test shipments. No credit card required to start. You can upgrade to a paid plan anytime during or after the trial.</p>
+            </div>
+            
+            <div class="bg-gray-50 rounded-lg p-6">
+                <h3 class="text-lg font-semibold text-gray-800 mb-3">Do you offer volume discounts?</h3>
+                <p class="text-gray-600">Yes, we offer volume discounts for high-volume customers and multi-year contracts. Enterprise customers can benefit from custom pricing based on their specific needs and usage patterns.</p>
+            </div>
+            
+            <div class="bg-gray-50 rounded-lg p-6">
+                <h3 class="text-lg font-semibold text-gray-800 mb-3">How secure is my data?</h3>
+                <p class="text-gray-600">We maintain SOC 2 Type II compliance with end-to-end encryption for all data. Your trade data is processed securely and never shared with third parties. Enterprise customers can also choose private cloud deployment options.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- CTA Section -->
+<section class="py-20 bg-blue-600">
+    <div class="container mx-auto px-6 text-center">
+        <h2 class="text-4xl font-bold text-white mb-4">
+            Ready to Get Started?
+        </h2>
+        <p class="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">
+            Join thousands of customs professionals who trust TradeGuard AI for their compliance needs.
+        </p>
+        <div class="space-x-4">
+            <button class="bg-white text-blue-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
+                Start Free Trial
+            </button>
+            <button class="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors">
+                Contact Sales
+            </button>
+        </div>
+    </div>
+</section>
+
+<!-- Footer -->
+<footer class="bg-gray-900 text-white py-16">
+    <div class="container mx-auto px-6">
+        <div class="grid md:grid-cols-4 gap-8">
+            <div>
+                <div class="flex items-center space-x-2 mb-4">
+                    <div class="w-10 h-10 bg-gradient-to-br from-blue-600 to-purple-600 rounded-xl flex items-center justify-center">
+                        <i class="fas fa-brain text-white text-lg"></i>
+                    </div>
+                    <span class="text-xl font-bold" data-translate="brand">TradeGuard AI</span>
+                </div>
+                <p class="text-gray-400" data-translate="footer.desc">
+                    Revolutionizing customs compliance through AI-powered automation and expert collaboration.
+                </p>
+            </div>
+            
+            <div>
+                <h4 class="font-semibold mb-4" data-translate="footer.product">Product</h4>
+                <ul class="space-y-2 text-gray-400">
+                    <li><a href="features.html" class="hover:text-white transition-colors" data-translate="nav.features">Features</a></li>
+                    <li><a href="architecture.html" class="hover:text-white transition-colors" data-translate="nav.architecture">Architecture</a></li>
+                    <li><a href="pricing.html" class="hover:text-white transition-colors" data-translate="nav.pricing">Pricing</a></li>
+                </ul>
+            </div>
+            
+            <div>
+                <h4 class="font-semibold mb-4" data-translate="footer.company">Company</h4>
+                <ul class="space-y-2 text-gray-400">
+                    <li><a href="about.html" class="hover:text-white transition-colors" data-translate="nav.about">About Us</a></li>
+                    <li><a href="contact.html" class="hover:text-white transition-colors" data-translate="nav.contact">Contact</a></li>
+                </ul>
+            </div>
+            
+            <div>
+                <h4 class="font-semibold mb-4" data-translate="footer.connect">Connect</h4>
+                <div class="flex space-x-4">
+                    <a href="#" class="w-10 h-10 bg-gray-700 rounded-full flex items-center justify-center hover:bg-gray-600 transition-colors">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                    <a href="#" class="w-10 h-10 bg-gray-700 rounded-full flex items-center justify-center hover:bg-gray-600 transition-colors">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="border-t border-gray-700 mt-12 pt-8 text-center text-gray-400">
+            <p>&copy; 2025 TradeGuard AI. All rights reserved.</p>
+        </div>
+    </div>
+</footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - TradeGuard AI</title>
+    <meta name="description" content="Get in touch with TradeGuard AI. Contact our sales team, request a demo, or reach out for support. We're here to help transform your customs operations.">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+        .gradient-bg { background: linear-gradient(135deg, #1e3c72 0%, #2a5298 50%, #667eea 100%); }
+        .navbar-scroll { backdrop-filter: blur(10px); background-color: rgba(255, 255, 255, 0.95); }
+        .navbar-scroll .nav-text { color: #374151 !important; }
+        .navbar-scroll .nav-text:hover { color: #2563eb !important; }
+        .navbar-scroll .nav-active { color: #2563eb !important; }
+        .navbar-scroll .nav-brand { color: #1f2937 !important; }
+        .navbar-scroll .nav-select { color: #374151; border-color: #d1d5db; background-color: white; }
+        .nav-text { color: white !important; }
+        .nav-text:hover { color: #60a5fa !important; }
+        .nav-brand { color: white !important; }
+        .nav-select { color: white; border-color: rgba(255, 255, 255, 0.4); background-color: rgba(255, 255, 255, 0.15); }
+        .nav-select option { color: #1f2937; background-color: white; }
+    </style>
+</head>
+<body class="antialiased bg-white">
+
+<!-- Navigation -->
+<nav id="navbar" class="fixed w-full z-50 transition-all duration-300 py-4">
+    <div class="container mx-auto px-6">
+        <div class="flex justify-between items-center">
+            <div class="flex items-center space-x-2">
+                <div class="w-10 h-10 bg-gradient-to-br from-blue-600 to-purple-600 rounded-xl flex items-center justify-center">
+                    <i class="fas fa-brain text-white text-lg"></i>
+                </div>
+                <a href="index.html" class="text-xl font-bold nav-brand" data-translate="brand">TradeGuard AI</a>
+            </div>
+            
+            <div class="hidden md:flex space-x-8">
+                <a href="index.html" class="nav-text font-medium transition-colors" data-translate="nav.home">Home</a>
+                <a href="features.html" class="nav-text font-medium transition-colors" data-translate="nav.features">Features</a>
+                <a href="architecture.html" class="nav-text font-medium transition-colors" data-translate="nav.architecture">Architecture</a>
+                <a href="solutions.html" class="nav-text font-medium transition-colors" data-translate="nav.solutions">Solutions</a>
+                <a href="pricing.html" class="nav-text font-medium transition-colors" data-translate="nav.pricing">Pricing</a>
+                <a href="about.html" class="nav-text font-medium transition-colors" data-translate="nav.about">About</a>
+                <a href="contact.html" class="nav-text nav-active font-medium" data-translate="nav.contact">Contact</a>
+            </div>
+            
+            <div class="flex items-center space-x-4">
+                <div class="relative">
+                    <select id="languageSelector" class="nav-select bg-transparent rounded-lg px-3 py-2 text-sm focus:outline-none focus:border-blue-300 transition-colors">
+                        <option value="en">English</option>
+                        <option value="zh">中文</option>
+                        <option value="ja">日本語</option>
+                        <option value="vi">Tiếng Việt</option>
+                    </select>
+                </div>
+                <button class="bg-blue-600 text-white px-6 py-2 rounded-lg font-medium hover:bg-blue-700 transition-colors" data-translate="nav.demo">
+                    Request Demo
+                </button>
+            </div>
+        </div>
+    </div>
+</nav>
+
+<!-- Hero Section -->
+<section class="gradient-bg pt-28 pb-16">
+    <div class="container mx-auto px-6 text-center">
+        <h1 class="text-5xl font-bold text-white mb-6" data-translate="contact.hero.title">
+            Let's Transform Your Customs Operations Together
+        </h1>
+        <p class="text-xl text-blue-100 max-w-3xl mx-auto" data-translate="contact.hero.subtitle">
+            Ready to revolutionize your trade compliance? Our team is here to help you get started with TradeGuard AI.
+        </p>
+    </div>
+</section>
+
+<!-- Contact Form & Info -->
+<section class="py-20 bg-white">
+    <div class="container mx-auto px-6">
+        <div class="grid lg:grid-cols-2 gap-16">
+            <!-- Contact Form -->
+            <div>
+                <h2 class="text-3xl font-bold text-gray-800 mb-8">Get in Touch</h2>
+                
+                <form class="space-y-6" id="contactForm">
+                    <div class="grid md:grid-cols-2 gap-6">
+                        <div>
+                            <label for="firstName" class="block text-sm font-medium text-gray-700 mb-2">First Name *</label>
+                            <input type="text" id="firstName" name="firstName" required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-600 focus:border-transparent">
+                        </div>
+                        <div>
+                            <label for="lastName" class="block text-sm font-medium text-gray-700 mb-2">Last Name *</label>
+                            <input type="text" id="lastName" name="lastName" required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-600 focus:border-transparent">
+                        </div>
+                    </div>
+                    
+                    <div>
+                        <label for="email" class="block text-sm font-medium text-gray-700 mb-2">Business Email *</label>
+                        <input type="email" id="email" name="email" required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-600 focus:border-transparent">
+                    </div>
+                    
+                    <div>
+                        <label for="phone" class="block text-sm font-medium text-gray-700 mb-2">Phone Number</label>
+                        <input type="tel" id="phone" name="phone" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-600 focus:border-transparent">
+                    </div>
+                    
+                    <div>
+                        <label for="company" class="block text-sm font-medium text-gray-700 mb-2">Company Name *</label>
+                        <input type="text" id="company" name="company" required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-600 focus:border-transparent">
+                    </div>
+                    
+                    <div>
+                        <label for="jobTitle" class="block text-sm font-medium text-gray-700 mb-2">Job Title</label>
+                        <input type="text" id="jobTitle" name="jobTitle" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-600 focus:border-transparent">
+                    </div>
+                    
+                    <div>
+                        <label for="companyType" class="block text-sm font-medium text-gray-700 mb-2">Company Type *</label>
+                        <select id="companyType" name="companyType" required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-600 focus:border-transparent">
+                            <option value="">Select your company type</option>
+                            <option value="customs-broker">Customs Broker</option>
+                            <option value="freight-forwarder">Freight Forwarder</option>
+                            <option value="logistics-provider">Logistics Provider</option>
+                            <option value="manufacturer">Manufacturer</option>
+                            <option value="importer-exporter">Importer/Exporter</option>
+                            <option value="enterprise">Enterprise Corporation</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
+                    
+                    <div>
+                        <label for="monthlyVolume" class="block text-sm font-medium text-gray-700 mb-2">Monthly Shipment Volume</label>
+                        <select id="monthlyVolume" name="monthlyVolume" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-600 focus:border-transparent">
+                            <option value="">Select volume range</option>
+                            <option value="1-100">1 - 100 shipments</option>
+                            <option value="101-500">101 - 500 shipments</option>
+                            <option value="501-1000">501 - 1,000 shipments</option>
+                            <option value="1001-5000">1,001 - 5,000 shipments</option>
+                            <option value="5000+">5,000+ shipments</option>
+                        </select>
+                    </div>
+                    
+                    <div>
+                        <label for="inquiryType" class="block text-sm font-medium text-gray-700 mb-2">Inquiry Type *</label>
+                        <select id="inquiryType" name="inquiryType" required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-600 focus:border-transparent">
+                            <option value="">What can we help you with?</option>
+                            <option value="demo">Request a Demo</option>
+                            <option value="trial">Start Free Trial</option>
+                            <option value="pricing">Pricing Information</option>
+                            <option value="integration">Integration Questions</option>
+                            <option value="partnership">Partnership Opportunities</option>
+                            <option value="support">Technical Support</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
+                    
+                    <div>
+                        <label for="message" class="block text-sm font-medium text-gray-700 mb-2">Message</label>
+                        <textarea id="message" name="message" rows="5" placeholder="Tell us more about your needs and how we can help..." class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-600 focus:border-transparent"></textarea>
+                    </div>
+                    
+                    <div class="flex items-start space-x-3">
+                        <input type="checkbox" id="newsletter" name="newsletter" class="mt-1 rounded">
+                        <label for="newsletter" class="text-sm text-gray-600">
+                            I'd like to receive updates about TradeGuard AI products and industry insights. You can unsubscribe at any time.
+                        </label>
+                    </div>
+                    
+                    <button type="submit" class="w-full bg-blue-600 text-white py-4 px-6 rounded-lg font-semibold hover:bg-blue-700 transition-colors">
+                        Send Message
+                    </button>
+                </form>
+                
+                <p class="text-xs text-gray-500 mt-4">
+                    By submitting this form, you agree to our <a href="#" class="text-blue-600 hover:underline">Privacy Policy</a> and <a href="#" class="text-blue-600 hover:underline">Terms of Service</a>.
+                </p>
+            </div>
+            
+            <!-- Contact Information -->
+            <div>
+                <h2 class="text-3xl font-bold text-gray-800 mb-8">Other Ways to Reach Us</h2>
+                
+                <div class="space-y-8">
+                    <!-- Quick Actions -->
+                    <div class="bg-blue-50 rounded-xl p-6">
+                        <h3 class="text-xl font-bold nav-brand mb-4">Quick Actions</h3>
+                        <div class="space-y-3">
+                            <button onclick="startTrial()" class="w-full bg-blue-600 text-white py-3 px-6 rounded-lg font-semibold hover:bg-blue-700 transition-colors text-left flex items-center">
+                                <i class="fas fa-play mr-3"></i>
+                                Start Free Trial (No Credit Card Required)
+                            </button>
+                            <button onclick="showDemo()" class="w-full border-2 border-blue-600 text-blue-600 py-3 px-6 rounded-lg font-semibold hover:bg-blue-600 hover:text-white transition-colors text-left flex items-center">
+                                <i class="fas fa-desktop mr-3"></i>
+                                Schedule a Personalized Demo
+                            </button>
+                        </div>
+                    </div>
+                    
+                    <!-- Office Locations -->
+                    <div>
+                        <h3 class="text-xl font-bold nav-brand mb-6">Global Offices</h3>
+                        <div class="space-y-6">
+                            <div class="flex items-start space-x-4">
+                                <div class="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center flex-shrink-0">
+                                    <i class="fas fa-map-marker-alt text-blue-600"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-semibold text-gray-800" data-translate="contact.office.hq">Headquarters - Suzhou</h4>
+                                    <p class="text-gray-600 text-sm" data-translate="contact.office.hq.address">Suzhou Industrial Park, Xinqi Innovation Port E603-E612<br>Suzhou, Jiangsu 215000, China</p>
+                                    <p class="text-blue-600 text-sm">400-400-668</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start space-x-4">
+                                <div class="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center flex-shrink-0">
+                                    <i class="fas fa-map-marker-alt text-green-600"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-semibold text-gray-800" data-translate="contact.office.asia">Shanghai Office</h4>
+                                    <p class="text-gray-600 text-sm" data-translate="contact.office.asia.address">Floor 2-3, Tower E, Jinrong Coast Center, 440 North Bund<br>Hongkou District, Shanghai 200000, China</p>
+                                    <p class="text-green-600 text-sm">missattic.ai@gmail.com</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start space-x-4">
+                                <div class="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center flex-shrink-0">
+                                    <i class="fas fa-map-marker-alt text-purple-600"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-semibold text-gray-800" data-translate="contact.office.shenzhen">Shenzhen Office</h4>
+                                    <p class="text-gray-600 text-sm" data-translate="contact.office.shenzhen.address">Room 212, Overseas Chinese Friendship Building, 12 Yejia Road<br>Bao'an District, Shenzhen 518000, China</p>
+                                    <p class="text-purple-600 text-sm">missattic.ai@gmail.com</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start space-x-4">
+                                <div class="w-12 h-12 bg-yellow-100 rounded-lg flex items-center justify-center flex-shrink-0">
+                                    <i class="fas fa-map-marker-alt text-yellow-600"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-semibold text-gray-800" data-translate="contact.office.qingdao">Qingdao Office</h4>
+                                    <p class="text-gray-600 text-sm" data-translate="contact.office.qingdao.address">Room 110, Fudong Building, 8 Licang Road<br>Licang District, Qingdao 266000, China</p>
+                                    <p class="text-yellow-600 text-sm">missattic.ai@gmail.com</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Support Hours -->
+                    <div class="bg-gray-50 rounded-xl p-6">
+                        <h3 class="text-xl font-bold nav-brand mb-4">Support Hours</h3>
+                        <div class="space-y-2 text-sm">
+                            <div class="flex justify-between">
+                                <span class="text-gray-600">Sales Inquiries:</span>
+                                <span class="font-semibold">24/7 Global Coverage</span>
+                            </div>
+                            <div class="flex justify-between">
+                                <span class="text-gray-600">Technical Support:</span>
+                                <span class="font-semibold">Business Hours (All Regions)</span>
+                            </div>
+                            <div class="flex justify-between">
+                                <span class="text-gray-600">Emergency Support:</span>
+                                <span class="font-semibold">Enterprise Customers Only</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Direct Contacts -->
+                    <div>
+                        <h3 class="text-xl font-bold nav-brand mb-4">Direct Contacts</h3>
+                        <div class="space-y-3">
+                            <div class="flex items-center space-x-3">
+                                <i class="fas fa-envelope text-blue-600"></i>
+                                <div>
+                                    <span class="text-sm text-gray-600">Sales:</span>
+                                    <span class="font-semibold ml-2" data-translate="contact.direct.sales.email">missattic.ai@gmail.com</span>
+                                </div>
+                            </div>
+                            <div class="flex items-center space-x-3">
+                                <i class="fas fa-life-ring text-green-600"></i>
+                                <div>
+                                    <span class="text-sm text-gray-600">Support:</span>
+                                    <span class="font-semibold ml-2" data-translate="contact.direct.support.email">missattic.ai@gmail.com</span>
+                                </div>
+                            </div>
+                            <div class="flex items-center space-x-3">
+                                <i class="fas fa-handshake text-purple-600"></i>
+                                <div>
+                                    <span class="text-sm text-gray-600">Partnerships:</span>
+                                    <span class="font-semibold ml-2" data-translate="contact.direct.partners.email">missattic.ai@gmail.com</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- FAQ Section -->
+<section class="py-20 bg-gray-50">
+    <div class="container mx-auto px-6">
+        <div class="text-center mb-16">
+            <h2 class="text-4xl font-bold text-gray-800 mb-4">Frequently Asked Questions</h2>
+            <p class="text-xl text-gray-600">Quick answers to common questions before you reach out.</p>
+        </div>
+        
+        <div class="max-w-4xl mx-auto grid md:grid-cols-2 gap-8">
+            <div>
+                <h3 class="text-lg font-semibold text-gray-800 mb-3">How quickly can we get started?</h3>
+                <p class="text-gray-600 text-sm">Most customers are up and running within 1-2 weeks. Our team handles the setup and provides comprehensive training.</p>
+            </div>
+            
+            <div>
+                <h3 class="text-lg font-semibold text-gray-800 mb-3">Do you integrate with existing systems?</h3>
+                <p class="text-gray-600 text-sm">Yes, we integrate with major ERP systems (SAP, Oracle), TMS platforms, and customs systems via our RESTful APIs.</p>
+            </div>
+            
+            <div>
+                <h3 class="text-lg font-semibold text-gray-800 mb-3">What's included in the free trial?</h3>
+                <p class="text-gray-600 text-sm">14-day full access to your chosen plan with up to 50 test shipments and dedicated onboarding support.</p>
+            </div>
+            
+            <div>
+                <h3 class="text-lg font-semibold text-gray-800 mb-3">Is my data secure?</h3>
+                <p class="text-gray-600 text-sm">We maintain SOC 2 Type II compliance with end-to-end encryption. Your data is never shared and you maintain full ownership.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Footer -->
+<footer class="bg-gray-900 text-white py-16">
+    <div class="container mx-auto px-6">
+        <div class="grid md:grid-cols-4 gap-8">
+            <div>
+                <div class="flex items-center space-x-2 mb-4">
+                    <div class="w-10 h-10 bg-gradient-to-br from-blue-600 to-purple-600 rounded-xl flex items-center justify-center">
+                        <i class="fas fa-brain text-white text-lg"></i>
+                    </div>
+                    <span class="text-xl font-bold" data-translate="brand">TradeGuard AI</span>
+                </div>
+                <p class="text-gray-400" data-translate="footer.desc">
+                    Revolutionizing customs compliance through AI-powered automation and expert collaboration.
+                </p>
+            </div>
+            
+            <div>
+                <h4 class="font-semibold mb-4" data-translate="footer.product">Product</h4>
+                <ul class="space-y-2 text-gray-400">
+                    <li><a href="features.html" class="hover:text-white transition-colors" data-translate="nav.features">Features</a></li>
+                    <li><a href="architecture.html" class="hover:text-white transition-colors" data-translate="nav.architecture">Architecture</a></li>
+                    <li><a href="pricing.html" class="hover:text-white transition-colors" data-translate="nav.pricing">Pricing</a></li>
+                </ul>
+            </div>
+            
+            <div>
+                <h4 class="font-semibold mb-4" data-translate="footer.company">Company</h4>
+                <ul class="space-y-2 text-gray-400">
+                    <li><a href="about.html" class="hover:text-white transition-colors" data-translate="nav.about">About Us</a></li>
+                    <li><a href="contact.html" class="hover:text-white transition-colors" data-translate="nav.contact">Contact</a></li>
+                </ul>
+            </div>
+            
+            <div>
+                <h4 class="font-semibold mb-4" data-translate="footer.connect">Connect</h4>
+                <div class="flex space-x-4">
+                    <a href="#" class="w-10 h-10 bg-gray-700 rounded-full flex items-center justify-center hover:bg-gray-600 transition-colors">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                    <a href="#" class="w-10 h-10 bg-gray-700 rounded-full flex items-center justify-center hover:bg-gray-600 transition-colors">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="border-t border-gray-700 mt-12 pt-8 text-center text-gray-400">
+            <p>&copy; 2025 TradeGuard AI. All rights reserved.</p>
+        </div>
+    </div>
+</footer>
+
+<script src="js/main.js"></script>
+<script>
+// Contact form handling
+document.getElementById('contactForm').addEventListener('submit', function(e) {
+    e.preventDefault();
+    
+    // Get form data
+    const formData = new FormData(this);
+    const data = {};
+    for (let [key, value] of formData.entries()) {
+        data[key] = value;
+    }
+    
+    // Simulate form submission
+    alert('Thank you for your message! Our team will get back to you within 24 hours.');
+    
+    // Reset form
+    this.reset();
+});
+</script>
+</body>
+</html>

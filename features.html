@@ -1,0 +1,960 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Features - TradeGuard AI Platform</title>
+    <meta name="description" content="Explore the comprehensive features of our AI-powered customs clearance platform. Multi-modal document recognition, risk scanning, and intelligent decision support.">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+        .gradient-bg { background: linear-gradient(135deg, #1e3c72 0%, #2a5298 50%, #667eea 100%); }
+        .feature-card { transition: all 0.3s ease; }
+        .feature-card:hover { transform: translateY(-8px); box-shadow: 0 20px 40px rgba(0,0,0,0.1); }
+        .navbar-scroll { backdrop-filter: blur(10px); background-color: rgba(255, 255, 255, 0.95); }
+        .navbar-scroll .nav-text { color: #374151 !important; }
+        .navbar-scroll .nav-text:hover { color: #2563eb !important; }
+        .navbar-scroll .nav-active { color: #2563eb !important; }
+        .navbar-scroll .nav-brand { color: #1f2937 !important; }
+        .navbar-scroll .nav-select { color: #374151; border-color: #d1d5db; background-color: white; }
+        .nav-text { color: white !important; }
+        .nav-text:hover { color: #60a5fa !important; }
+        .nav-brand { color: white !important; }
+        .nav-select { color: white; border-color: rgba(255, 255, 255, 0.4); background-color: rgba(255, 255, 255, 0.15); }
+        .nav-select option { color: #1f2937; background-color: white; }
+        .feature-detail { opacity: 0; transform: translateY(30px); transition: all 0.6s ease; }
+        .feature-detail.active { opacity: 1; transform: translateY(0); }
+        .process-step { position: relative; }
+        .process-step::before { content: ''; position: absolute; top: 50%; left: 100%; width: 50px; height: 2px; background: linear-gradient(90deg, #667eea, #764ba2); transform: translateY(-50%); z-index: 1; }
+        .process-step:last-child::before { display: none; }
+    </style>
+</head>
+<body class="antialiased bg-white">
+
+<!-- Navigation -->
+<nav id="navbar" class="fixed w-full z-50 transition-all duration-300 py-4">
+    <div class="container mx-auto px-6">
+        <div class="flex justify-between items-center">
+            <div class="flex items-center space-x-2">
+                <div class="w-10 h-10 bg-gradient-to-br from-blue-600 to-purple-600 rounded-xl flex items-center justify-center">
+                    <i class="fas fa-brain text-white text-lg"></i>
+                </div>
+                <a href="index.html" class="text-xl font-bold nav-brand" data-translate="brand">TradeGuard AI</a>
+            </div>
+            
+            <div class="hidden md:flex space-x-8">
+                <a href="index.html" class="nav-text font-medium transition-colors" data-translate="nav.home">Home</a>
+                <a href="features.html" class="nav-text nav-active font-medium" data-translate="nav.features">Features</a>
+                <a href="architecture.html" class="nav-text font-medium transition-colors" data-translate="nav.architecture">Architecture</a>
+                <a href="solutions.html" class="nav-text font-medium transition-colors" data-translate="nav.solutions">Solutions</a>
+                <a href="pricing.html" class="nav-text font-medium transition-colors" data-translate="nav.pricing">Pricing</a>
+                <a href="about.html" class="nav-text font-medium transition-colors" data-translate="nav.about">About</a>
+                <a href="contact.html" class="nav-text font-medium transition-colors" data-translate="nav.contact">Contact</a>
+            </div>
+            
+            <div class="flex items-center space-x-4">
+                <div class="relative">
+                    <select id="languageSelector" class="nav-select bg-transparent rounded-lg px-3 py-2 text-sm focus:outline-none focus:border-blue-300 transition-colors">
+                        <option value="en">English</option>
+                        <option value="zh">中文</option>
+                        <option value="ja">日本語</option>
+                        <option value="vi">Tiếng Việt</option>
+                    </select>
+                </div>
+                <button class="bg-blue-600 text-white px-6 py-2 rounded-lg font-medium hover:bg-blue-700 transition-colors" data-translate="nav.demo">
+                    Request Demo
+                </button>
+            </div>
+        </div>
+    </div>
+</nav>
+
+<!-- Hero Section -->
+<section class="gradient-bg pt-28 pb-16">
+    <div class="container mx-auto px-6">
+        <div class="text-center text-white">
+            <h1 class="text-5xl font-bold mb-6" data-translate="features.hero.title">
+                Comprehensive AI Features for Customs Compliance
+            </h1>
+            <p class="text-xl text-blue-100 max-w-3xl mx-auto" data-translate="features.hero.subtitle">
+                Discover how our 5 core modules work together to transform your customs clearance process from manual, error-prone operations to intelligent, automated workflows.
+            </p>
+        </div>
+    </div>
+</section>
+
+<!-- Features Overview -->
+<section class="py-20 bg-white">
+    <div class="container mx-auto px-6">
+        <div class="text-center mb-16">
+            <h2 class="text-4xl font-bold text-gray-800 mb-4" data-translate="features.overview.title">
+                5 Core AI Modules
+            </h2>
+            <p class="text-xl text-gray-600 max-w-3xl mx-auto" data-translate="features.overview.subtitle">
+                Each module is designed to address specific pain points in the customs clearance workflow, working seamlessly together to deliver unprecedented efficiency and accuracy.
+            </p>
+        </div>
+
+        <!-- Process Flow -->
+        <div class="mb-20">
+            <div class="grid lg:grid-cols-5 gap-8 items-center">
+                <div class="process-step text-center">
+                    <div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-upload text-blue-600 text-xl"></i>
+                    </div>
+                    <h3 class="font-semibold text-gray-800 mb-2" data-translate="process.step1">Document Upload</h3>
+                    <p class="text-sm text-gray-600" data-translate="process.step1.desc">Multi-format input</p>
+                </div>
+                
+                <div class="process-step text-center">
+                    <div class="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-eye text-purple-600 text-xl"></i>
+                    </div>
+                    <h3 class="font-semibold text-gray-800 mb-2" data-translate="process.step2">Recognition</h3>
+                    <p class="text-sm text-gray-600" data-translate="process.step2.desc">AI extraction</p>
+                </div>
+                
+                <div class="process-step text-center">
+                    <div class="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-cogs text-green-600 text-xl"></i>
+                    </div>
+                    <h3 class="font-semibold text-gray-800 mb-2" data-translate="process.step3">Structuring</h3>
+                    <p class="text-sm text-gray-600" data-translate="process.step3.desc">Data mapping</p>
+                </div>
+                
+                <div class="process-step text-center">
+                    <div class="w-16 h-16 bg-red-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-shield-alt text-red-600 text-xl"></i>
+                    </div>
+                    <h3 class="font-semibold text-gray-800 mb-2" data-translate="process.step4">Risk Scan</h3>
+                    <p class="text-sm text-gray-600" data-translate="process.step4.desc">8-dimension analysis</p>
+                </div>
+                
+                <div class="text-center">
+                    <div class="w-16 h-16 bg-yellow-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-lightbulb text-yellow-600 text-xl"></i>
+                    </div>
+                    <h3 class="font-semibold text-gray-800 mb-2" data-translate="process.step5">Decision</h3>
+                    <p class="text-sm text-gray-600" data-translate="process.step5.desc">AI recommendations</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Module 1: Multi-Modal Document Recognition -->
+<section class="py-20 bg-gray-50">
+    <div class="container mx-auto px-6">
+        <div class="grid lg:grid-cols-2 gap-16 items-center">
+            <div class="feature-detail">
+                <div class="flex items-center mb-6">
+                    <div class="w-16 h-16 bg-blue-100 rounded-xl flex items-center justify-center mr-4">
+                        <i class="fas fa-eye text-blue-600 text-2xl"></i>
+                    </div>
+                    <div>
+                        <span class="text-blue-600 font-semibold text-sm uppercase tracking-wide">Module 1</span>
+                        <h2 class="text-3xl font-bold text-gray-800" data-translate="module1.title">Multi-Modal Document Recognition</h2>
+                    </div>
+                </div>
+                
+                <p class="text-xl text-gray-600 mb-8" data-translate="module1.description">
+                    Our advanced AI system intelligently processes documents in any format - PDFs, images, scanned copies - with industry-leading accuracy rates exceeding 98%.
+                </p>
+                
+                <div class="space-y-6">
+                    <div class="flex items-start space-x-4">
+                        <div class="w-8 h-8 bg-blue-100 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                            <i class="fas fa-check text-blue-600 text-sm"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-semibold text-gray-800 mb-2" data-translate="module1.feature1.title">Universal Format Support</h4>
+                            <p class="text-gray-600" data-translate="module1.feature1.desc">Process PDFs, JPEGs, PNGs, TIFFs, and even poor-quality scanned documents with consistent accuracy.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="flex items-start space-x-4">
+                        <div class="w-8 h-8 bg-blue-100 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                            <i class="fas fa-check text-blue-600 text-sm"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-semibold text-gray-800 mb-2" data-translate="module1.feature2.title">Intelligent Document Classification</h4>
+                            <p class="text-gray-600" data-translate="module1.feature2.desc">Automatically identifies document types: invoices, packing lists, certificates of origin, and more.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="flex items-start space-x-4">
+                        <div class="w-8 h-8 bg-blue-100 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                            <i class="fas fa-check text-blue-600 text-sm"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-semibold text-gray-800 mb-2" data-translate="module1.feature3.title">Multi-Language OCR</h4>
+                            <p class="text-gray-600" data-translate="module1.feature3.desc">Supports English, Chinese, Japanese, Vietnamese, and 20+ other languages with native accuracy.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="mt-8 p-6 bg-blue-50 rounded-lg">
+                    <div class="flex items-center mb-4">
+                        <i class="fas fa-chart-line text-blue-600 mr-3"></i>
+                        <span class="font-semibold text-gray-800" data-translate="module1.stats.title">Performance Metrics</span>
+                    </div>
+                    <div class="grid grid-cols-2 gap-4">
+                        <div>
+                            <div class="text-2xl font-bold text-blue-600">98.5%</div>
+                            <div class="text-sm text-gray-600" data-translate="module1.stats.accuracy">Data Extraction Accuracy</div>
+                        </div>
+                        <div>
+                            <div class="text-2xl font-bold text-blue-600">&lt;3s</div>
+                            <div class="text-sm text-gray-600" data-translate="module1.stats.speed">Processing Time per Document</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="relative">
+                <div class="bg-white rounded-2xl shadow-xl p-8">
+                    <div class="space-y-4">
+                        <div class="flex items-center justify-between">
+                            <span class="text-sm font-medium text-gray-500">Document Processing</span>
+                            <span class="text-xs text-green-600 bg-green-100 px-2 py-1 rounded-full">Live</span>
+                        </div>
+                        
+                        <div class="space-y-3">
+                            <div class="flex items-center space-x-3 p-3 bg-gray-50 rounded-lg">
+                                <i class="fas fa-file-pdf text-red-500"></i>
+                                <div class="flex-1">
+                                    <div class="text-sm font-medium">commercial_invoice.pdf</div>
+                                    <div class="text-xs text-gray-500">2.4 MB</div>
+                                </div>
+                                <div class="w-6 h-6 bg-green-100 rounded-full flex items-center justify-center">
+                                    <i class="fas fa-check text-green-600 text-xs"></i>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-center space-x-3 p-3 bg-gray-50 rounded-lg">
+                                <i class="fas fa-file-image text-blue-500"></i>
+                                <div class="flex-1">
+                                    <div class="text-sm font-medium">packing_list.jpg</div>
+                                    <div class="text-xs text-gray-500">1.8 MB</div>
+                                </div>
+                                <div class="w-6 h-6 bg-yellow-100 rounded-full flex items-center justify-center">
+                                    <div class="w-3 h-3 border-2 border-yellow-600 border-t-transparent rounded-full animate-spin"></div>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-center space-x-3 p-3 bg-gray-50 rounded-lg">
+                                <i class="fas fa-file-alt text-green-500"></i>
+                                <div class="flex-1">
+                                    <div class="text-sm font-medium">certificate_origin.png</div>
+                                    <div class="text-xs text-gray-500">956 KB</div>
+                                </div>
+                                <div class="w-6 h-6 bg-gray-200 rounded-full flex items-center justify-center">
+                                    <i class="fas fa-clock text-gray-500 text-xs"></i>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="mt-6 p-4 bg-green-50 rounded-lg">
+                            <div class="flex items-center justify-between">
+                                <span class="text-sm font-medium text-green-800">Extracted Fields</span>
+                                <span class="text-xs text-green-600">23/23 fields</span>
+                            </div>
+                            <div class="mt-2 grid grid-cols-2 gap-2 text-xs">
+                                <div class="text-gray-600">Shipper: ✓</div>
+                                <div class="text-gray-600">Consignee: ✓</div>
+                                <div class="text-gray-600">HS Codes: ✓</div>
+                                <div class="text-gray-600">Values: ✓</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Module 2: Structured Data Processing -->
+<section class="py-20 bg-white">
+    <div class="container mx-auto px-6">
+        <div class="grid lg:grid-cols-2 gap-16 items-center">
+            <div class="order-2 lg:order-1">
+                <div class="bg-white rounded-2xl shadow-xl p-8">
+                    <div class="space-y-6">
+                        <div class="flex items-center justify-between">
+                            <span class="text-sm font-medium text-gray-500">Data Structuring Pipeline</span>
+                            <span class="text-xs text-blue-600 bg-blue-100 px-2 py-1 rounded-full">Processing</span>
+                        </div>
+                        
+                        <div class="space-y-4">
+                            <div class="border rounded-lg p-4">
+                                <div class="text-xs text-gray-500 mb-2">Raw Input</div>
+                                <div class="bg-gray-100 p-3 rounded text-xs font-mono">
+                                    "Product: Women's Cotton T-Shirt, 100% cotton, 
+                                    Made in Vietnam, Qty: 5000 pcs, 
+                                    Unit Price: $3.50 FOB"
+                                </div>
+                            </div>
+                            
+                            <div class="flex justify-center">
+                                <i class="fas fa-arrow-down text-blue-600"></i>
+                            </div>
+                            
+                            <div class="border rounded-lg p-4 bg-blue-50">
+                                <div class="text-xs text-gray-500 mb-2">Structured Output</div>
+                                <div class="space-y-2 text-xs">
+                                    <div class="flex justify-between">
+                                        <span class="text-gray-600">HS Code:</span>
+                                        <span class="font-semibold">6109.10.00</span>
+                                    </div>
+                                    <div class="flex justify-between">
+                                        <span class="text-gray-600">Description:</span>
+                                        <span class="font-semibold">Cotton T-shirts</span>
+                                    </div>
+                                    <div class="flex justify-between">
+                                        <span class="text-gray-600">Origin:</span>
+                                        <span class="font-semibold">VN</span>
+                                    </div>
+                                    <div class="flex justify-between">
+                                        <span class="text-gray-600">Quantity:</span>
+                                        <span class="font-semibold">5,000 pcs</span>
+                                    </div>
+                                    <div class="flex justify-between">
+                                        <span class="text-gray-600">Unit Value:</span>
+                                        <span class="font-semibold">$3.50</span>
+                                    </div>
+                                    <div class="flex justify-between">
+                                        <span class="text-gray-600">Total Value:</span>
+                                        <span class="font-semibold">$17,500.00</span>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-center justify-center space-x-2 text-green-600">
+                                <i class="fas fa-check-circle"></i>
+                                <span class="text-sm font-medium">Mapping Complete</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="order-1 lg:order-2 feature-detail">
+                <div class="flex items-center mb-6">
+                    <div class="w-16 h-16 bg-purple-100 rounded-xl flex items-center justify-center mr-4">
+                        <i class="fas fa-cogs text-purple-600 text-2xl"></i>
+                    </div>
+                    <div>
+                        <span class="text-purple-600 font-semibold text-sm uppercase tracking-wide">Module 2</span>
+                        <h2 class="text-3xl font-bold text-gray-800" data-translate="module2.title">Structured Data Processing</h2>
+                    </div>
+                </div>
+                
+                <p class="text-xl text-gray-600 mb-8" data-translate="module2.description">
+                    Transform unstructured document content into standardized, validated customs declaration elements that comply with global trade regulations.
+                </p>
+                
+                <div class="space-y-6">
+                    <div class="flex items-start space-x-4">
+                        <div class="w-8 h-8 bg-purple-100 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                            <i class="fas fa-check text-purple-600 text-sm"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-semibold text-gray-800 mb-2" data-translate="module2.feature1.title">Intelligent Field Mapping</h4>
+                            <p class="text-gray-600" data-translate="module2.feature1.desc">Automatically maps extracted data to customs declaration fields across different countries and regulations.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="flex items-start space-x-4">
+                        <div class="w-8 h-8 bg-purple-100 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                            <i class="fas fa-check text-purple-600 text-sm"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-semibold text-gray-800 mb-2" data-translate="module2.feature2.title">Data Validation & Cleansing</h4>
+                            <p class="text-gray-600" data-translate="module2.feature2.desc">Validates formats, calculates totals, and ensures data integrity before risk analysis.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="flex items-start space-x-4">
+                        <div class="w-8 h-8 bg-purple-100 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                            <i class="fas fa-check text-purple-600 text-sm"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-semibold text-gray-800 mb-2" data-translate="module2.feature3.title">Standard Format Output</h4>
+                            <p class="text-gray-600" data-translate="module2.feature3.desc">Generates standardized JSON/XML outputs compatible with existing customs systems and ERPs.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Module 3: 8-Dimension Risk Scanner -->
+<section class="py-20 bg-gray-50">
+    <div class="container mx-auto px-6">
+        <div class="grid lg:grid-cols-2 gap-16 items-center">
+            <div class="feature-detail">
+                <div class="flex items-center mb-6">
+                    <div class="w-16 h-16 bg-red-100 rounded-xl flex items-center justify-center mr-4">
+                        <i class="fas fa-shield-alt text-red-600 text-2xl"></i>
+                    </div>
+                    <div>
+                        <span class="text-red-600 font-semibold text-sm uppercase tracking-wide">Module 3</span>
+                        <h2 class="text-3xl font-bold text-gray-800" data-translate="module3.title">8-Dimension Risk Scanner Engine</h2>
+                    </div>
+                </div>
+                
+                <p class="text-xl text-gray-600 mb-8" data-translate="module3.description">
+                    Comprehensive risk analysis across eight critical dimensions to identify potential compliance issues before they become costly problems.
+                </p>
+                
+                <div class="grid md:grid-cols-2 gap-6 mb-8">
+                    <div class="bg-white p-4 rounded-lg shadow-sm">
+                        <div class="flex items-center mb-3">
+                            <div class="w-8 h-8 bg-red-100 rounded-full flex items-center justify-center mr-3">
+                                <i class="fas fa-barcode text-red-600 text-sm"></i>
+                            </div>
+                            <h4 class="font-semibold text-gray-800" data-translate="risk.dimension1">HS Code Classification</h4>
+                        </div>
+                        <p class="text-sm text-gray-600" data-translate="risk.dimension1.desc">Validates tariff classifications using deep learning models trained on customs databases.</p>
+                    </div>
+                    
+                    <div class="bg-white p-4 rounded-lg shadow-sm">
+                        <div class="flex items-center mb-3">
+                            <div class="w-8 h-8 bg-orange-100 rounded-full flex items-center justify-center mr-3">
+                                <i class="fas fa-dollar-sign text-orange-600 text-sm"></i>
+                            </div>
+                            <h4 class="font-semibold text-gray-800" data-translate="risk.dimension2">Price Reasonableness</h4>
+                        </div>
+                        <p class="text-sm text-gray-600" data-translate="risk.dimension2.desc">Compares declared values against global commodity price databases and historical data.</p>
+                    </div>
+                    
+                    <div class="bg-white p-4 rounded-lg shadow-sm">
+                        <div class="flex items-center mb-3">
+                            <div class="w-8 h-8 bg-yellow-100 rounded-full flex items-center justify-center mr-3">
+                                <i class="fas fa-balance-scale text-yellow-600 text-sm"></i>
+                            </div>
+                            <h4 class="font-semibold text-gray-800" data-translate="risk.dimension3">Document Consistency</h4>
+                        </div>
+                        <p class="text-sm text-gray-600" data-translate="risk.dimension3.desc">Cross-validates information across invoices, packing lists, and certificates.</p>
+                    </div>
+                    
+                    <div class="bg-white p-4 rounded-lg shadow-sm">
+                        <div class="flex items-center mb-3">
+                            <div class="w-8 h-8 bg-green-100 rounded-full flex items-center justify-center mr-3">
+                                <i class="fas fa-gavel text-green-600 text-sm"></i>
+                            </div>
+                            <h4 class="font-semibold text-gray-800" data-translate="risk.dimension4">Policy Compliance</h4>
+                        </div>
+                        <p class="text-sm text-gray-600" data-translate="risk.dimension4.desc">Checks against current trade policies, sanctions, and regulatory requirements.</p>
+                    </div>
+                    
+                    <div class="bg-white p-4 rounded-lg shadow-sm">
+                        <div class="flex items-center mb-3">
+                            <div class="w-8 h-8 bg-blue-100 rounded-full flex items-center justify-center mr-3">
+                                <i class="fas fa-globe text-blue-600 text-sm"></i>
+                            </div>
+                            <h4 class="font-semibold text-gray-800" data-translate="risk.dimension5">Origin Verification</h4>
+                        </div>
+                        <p class="text-sm text-gray-600" data-translate="risk.dimension5.desc">Validates country of origin claims and preferential trade agreement eligibility.</p>
+                    </div>
+                    
+                    <div class="bg-white p-4 rounded-lg shadow-sm">
+                        <div class="flex items-center mb-3">
+                            <div class="w-8 h-8 bg-indigo-100 rounded-full flex items-center justify-center mr-3">
+                                <i class="fas fa-certificate text-indigo-600 text-sm"></i>
+                            </div>
+                            <h4 class="font-semibold text-gray-800" data-translate="risk.dimension6">License & Permits</h4>
+                        </div>
+                        <p class="text-sm text-gray-600" data-translate="risk.dimension6.desc">Identifies required import/export licenses and regulatory approvals.</p>
+                    </div>
+                    
+                    <div class="bg-white p-4 rounded-lg shadow-sm">
+                        <div class="flex items-center mb-3">
+                            <div class="w-8 h-8 bg-purple-100 rounded-full flex items-center justify-center mr-3">
+                                <i class="fas fa-truck text-purple-600 text-sm"></i>
+                            </div>
+                            <h4 class="font-semibold text-gray-800" data-translate="risk.dimension7">Logistics Validation</h4>
+                        </div>
+                        <p class="text-sm text-gray-600" data-translate="risk.dimension7.desc">Validates shipping routes, transport modes, and delivery timelines.</p>
+                    </div>
+                    
+                    <div class="bg-white p-4 rounded-lg shadow-sm">
+                        <div class="flex items-center mb-3">
+                            <div class="w-8 h-8 bg-pink-100 rounded-full flex items-center justify-center mr-3">
+                                <i class="fas fa-history text-pink-600 text-sm"></i>
+                            </div>
+                            <h4 class="font-semibold text-gray-800" data-translate="risk.dimension8">Historical Patterns</h4>
+                        </div>
+                        <p class="text-sm text-gray-600" data-translate="risk.dimension8.desc">Analyzes historical trade patterns and flags anomalous transactions.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="relative">
+                <div class="bg-white rounded-2xl shadow-xl p-8">
+                    <div class="space-y-6">
+                        <div class="flex items-center justify-between">
+                            <span class="text-sm font-medium text-gray-500">Risk Assessment Dashboard</span>
+                            <span class="text-xs text-red-600 bg-red-100 px-2 py-1 rounded-full">3 Issues Found</span>
+                        </div>
+                        
+                        <!-- Overall Risk Score -->
+                        <div class="text-center p-4 bg-yellow-50 rounded-lg">
+                            <div class="text-3xl font-bold text-yellow-600 mb-2">Medium Risk</div>
+                            <div class="text-sm text-gray-600">Score: 65/100</div>
+                        </div>
+                        
+                        <!-- Risk Dimensions -->
+                        <div class="space-y-3">
+                            <div class="flex items-center justify-between p-3 bg-green-50 rounded">
+                                <div class="flex items-center space-x-3">
+                                    <i class="fas fa-barcode text-green-600"></i>
+                                    <span class="text-sm font-medium">HS Classification</span>
+                                </div>
+                                <span class="text-xs text-green-600 font-semibold">PASS</span>
+                            </div>
+                            
+                            <div class="flex items-center justify-between p-3 bg-red-50 rounded">
+                                <div class="flex items-center space-x-3">
+                                    <i class="fas fa-dollar-sign text-red-600"></i>
+                                    <span class="text-sm font-medium">Price Check</span>
+                                </div>
+                                <span class="text-xs text-red-600 font-semibold">FLAG</span>
+                            </div>
+                            
+                            <div class="flex items-center justify-between p-3 bg-yellow-50 rounded">
+                                <div class="flex items-center space-x-3">
+                                    <i class="fas fa-balance-scale text-yellow-600"></i>
+                                    <span class="text-sm font-medium">Doc Consistency</span>
+                                </div>
+                                <span class="text-xs text-yellow-600 font-semibold">WARN</span>
+                            </div>
+                            
+                            <div class="flex items-center justify-between p-3 bg-green-50 rounded">
+                                <div class="flex items-center space-x-3">
+                                    <i class="fas fa-gavel text-green-600"></i>
+                                    <span class="text-sm font-medium">Policy Compliance</span>
+                                </div>
+                                <span class="text-xs text-green-600 font-semibold">PASS</span>
+                            </div>
+                        </div>
+                        
+                        <div class="p-4 bg-gray-50 rounded-lg">
+                            <h4 class="font-semibold text-gray-800 mb-2">Recommended Actions:</h4>
+                            <ul class="text-sm text-gray-600 space-y-1">
+                                <li>• Verify declared unit price against market rates</li>
+                                <li>• Cross-check quantities in invoice vs packing list</li>
+                                <li>• Request additional supporting documentation</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Module 4: AI Decision Support -->
+<section class="py-20 bg-white">
+    <div class="container mx-auto px-6">
+        <div class="grid lg:grid-cols-2 gap-16 items-center">
+            <div class="order-2 lg:order-1">
+                <div class="bg-white rounded-2xl shadow-xl p-8">
+                    <div class="space-y-6">
+                        <div class="flex items-center justify-between">
+                            <span class="text-sm font-medium text-gray-500">AI Decision Assistant</span>
+                            <span class="text-xs text-green-600 bg-green-100 px-2 py-1 rounded-full">Recommendations Ready</span>
+                        </div>
+                        
+                        <div class="border-l-4 border-red-500 pl-4 py-2 bg-red-50">
+                            <div class="flex items-center justify-between mb-2">
+                                <span class="font-semibold text-red-800">High Priority Issue</span>
+                                <span class="text-xs text-red-600">HS Code Classification</span>
+                            </div>
+                            <p class="text-sm text-red-700 mb-3">Product description suggests textile item but declared under electronics category (HS 8517)</p>
+                            <div class="space-y-2">
+                                <div class="text-xs text-gray-600"><strong>Suggested Action:</strong></div>
+                                <div class="text-sm text-gray-800">Reclassify to HS 6109.10.00 (Cotton T-shirts and singlets)</div>
+                                <div class="text-xs text-gray-600"><strong>Reference:</strong> WCO Harmonized System, Chapter 61 - Articles of apparel</div>
+                            </div>
+                        </div>
+                        
+                        <div class="border-l-4 border-yellow-500 pl-4 py-2 bg-yellow-50">
+                            <div class="flex items-center justify-between mb-2">
+                                <span class="font-semibold text-yellow-800">Medium Priority</span>
+                                <span class="text-xs text-yellow-600">Price Validation</span>
+                            </div>
+                            <p class="text-sm text-yellow-700 mb-3">Declared unit price ($3.50) is 15% below market average ($4.12)</p>
+                            <div class="space-y-2">
+                                <div class="text-xs text-gray-600"><strong>Suggested Action:</strong></div>
+                                <div class="text-sm text-gray-800">Request supplier confirmation or provide cost breakdown</div>
+                            </div>
+                        </div>
+                        
+                        <div class="border-l-4 border-green-500 pl-4 py-2 bg-green-50">
+                            <div class="flex items-center justify-between mb-2">
+                                <span class="font-semibold text-green-800">Approved</span>
+                                <span class="text-xs text-green-600">Document Consistency</span>
+                            </div>
+                            <p class="text-sm text-green-700">All document fields are consistent and verified</p>
+                        </div>
+                        
+                        <div class="flex space-x-3 mt-6">
+                            <button class="flex-1 bg-blue-600 text-white py-2 px-4 rounded-lg text-sm font-medium hover:bg-blue-700 transition-colors">
+                                Apply Suggestions
+                            </button>
+                            <button class="flex-1 border border-gray-300 text-gray-700 py-2 px-4 rounded-lg text-sm font-medium hover:bg-gray-50 transition-colors">
+                                Manual Review
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="order-1 lg:order-2 feature-detail">
+                <div class="flex items-center mb-6">
+                    <div class="w-16 h-16 bg-green-100 rounded-xl flex items-center justify-center mr-4">
+                        <i class="fas fa-lightbulb text-green-600 text-2xl"></i>
+                    </div>
+                    <div>
+                        <span class="text-green-600 font-semibold text-sm uppercase tracking-wide">Module 4</span>
+                        <h2 class="text-3xl font-bold text-gray-800" data-translate="module4.title">AI-Driven Decision Support</h2>
+                    </div>
+                </div>
+                
+                <p class="text-xl text-gray-600 mb-8" data-translate="module4.description">
+                    Receive clear, actionable recommendations with full explanations and regulatory references. Our AI doesn't just flag issues - it tells you exactly how to fix them.
+                </p>
+                
+                <div class="space-y-6">
+                    <div class="flex items-start space-x-4">
+                        <div class="w-8 h-8 bg-green-100 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                            <i class="fas fa-check text-green-600 text-sm"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-semibold text-gray-800 mb-2" data-translate="module4.feature1.title">Explainable Recommendations</h4>
+                            <p class="text-gray-600" data-translate="module4.feature1.desc">Every suggestion comes with detailed reasoning, regulatory citations, and step-by-step remediation guidance.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="flex items-start space-x-4">
+                        <div class="w-8 h-8 bg-green-100 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                            <i class="fas fa-check text-green-600 text-sm"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-semibold text-gray-800 mb-2" data-translate="module4.feature2.title">Priority-Based Workflow</h4>
+                            <p class="text-gray-600" data-translate="module4.feature2.desc">Issues are automatically prioritized by risk level and potential financial impact, helping you focus on what matters most.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="flex items-start space-x-4">
+                        <div class="w-8 h-8 bg-green-100 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                            <i class="fas fa-check text-green-600 text-sm"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-semibold text-gray-800 mb-2" data-translate="module4.feature3.title">One-Click Corrections</h4>
+                            <p class="text-gray-600" data-translate="module4.feature3.desc">Accept AI suggestions with a single click, automatically updating all related fields and maintaining audit trails.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="mt-8 p-6 bg-green-50 rounded-lg">
+                    <div class="flex items-center mb-4">
+                        <i class="fas fa-brain text-green-600 mr-3"></i>
+                        <span class="font-semibold text-gray-800" data-translate="module4.ai.title">AI Transparency</span>
+                    </div>
+                    <p class="text-sm text-gray-600" data-translate="module4.ai.desc">
+                        Our explainable AI (XAI) ensures every recommendation is fully auditable and compliant with regulatory requirements for decision transparency.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Module 5: Knowledge & Collaboration -->
+<section class="py-20 bg-gray-50">
+    <div class="container mx-auto px-6">
+        <div class="grid lg:grid-cols-2 gap-16 items-center">
+            <div class="feature-detail">
+                <div class="flex items-center mb-6">
+                    <div class="w-16 h-16 bg-yellow-100 rounded-xl flex items-center justify-center mr-4">
+                        <i class="fas fa-users text-yellow-600 text-2xl"></i>
+                    </div>
+                    <div>
+                        <span class="text-yellow-600 font-semibold text-sm uppercase tracking-wide">Module 5</span>
+                        <h2 class="text-3xl font-bold text-gray-800" data-translate="module5.title">Knowledge & Collaboration Management</h2>
+                    </div>
+                </div>
+                
+                <p class="text-xl text-gray-600 mb-8" data-translate="module5.description">
+                    Build your organization's customs expertise through continuous learning and seamless team collaboration. Every interaction makes the system smarter.
+                </p>
+                
+                <div class="space-y-6">
+                    <div class="flex items-start space-x-4">
+                        <div class="w-8 h-8 bg-yellow-100 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                            <i class="fas fa-check text-yellow-600 text-sm"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-semibold text-gray-800 mb-2" data-translate="module5.feature1.title">Organizational Memory</h4>
+                            <p class="text-gray-600" data-translate="module5.feature1.desc">Captures all decisions, corrections, and expert knowledge to build your company's institutional memory.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="flex items-start space-x-4">
+                        <div class="w-8 h-8 bg-yellow-100 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                            <i class="fas fa-check text-yellow-600 text-sm"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-semibold text-gray-800 mb-2" data-translate="module5.feature2.title">Expert Review Workflows</h4>
+                            <p class="text-gray-600" data-translate="module5.feature2.desc">Structured approval processes with role-based permissions and escalation paths for complex cases.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="flex items-start space-x-4">
+                        <div class="w-8 h-8 bg-yellow-100 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                            <i class="fas fa-check text-yellow-600 text-sm"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-semibold text-gray-800 mb-2" data-translate="module5.feature3.title">Continuous Learning</h4>
+                            <p class="text-gray-600" data-translate="module5.feature3.desc">Machine learning models improve with every expert correction, creating a data flywheel effect.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="mt-8 p-6 bg-yellow-50 rounded-lg">
+                    <div class="flex items-center mb-4">
+                        <i class="fas fa-sync text-yellow-600 mr-3"></i>
+                        <span class="font-semibold text-gray-800" data-translate="module5.flywheel.title">Data Flywheel Effect</span>
+                    </div>
+                    <p class="text-sm text-gray-600" data-translate="module5.flywheel.desc">
+                        More usage → Better AI → More accurate results → Higher adoption → More data → Even better AI
+                    </p>
+                </div>
+            </div>
+            
+            <div class="relative">
+                <div class="bg-white rounded-2xl shadow-xl p-8">
+                    <div class="space-y-6">
+                        <div class="flex items-center justify-between">
+                            <span class="text-sm font-medium text-gray-500">Team Collaboration Hub</span>
+                            <span class="text-xs text-yellow-600 bg-yellow-100 px-2 py-1 rounded-full">3 Active Reviews</span>
+                        </div>
+                        
+                        <div class="space-y-4">
+                            <div class="border rounded-lg p-4">
+                                <div class="flex items-center justify-between mb-3">
+                                    <div class="flex items-center space-x-3">
+                                        <div class="w-8 h-8 bg-blue-100 rounded-full flex items-center justify-center">
+                                            <span class="text-xs font-semibold text-blue-600">JD</span>
+                                        </div>
+                                        <div>
+                                            <div class="text-sm font-medium">John Doe</div>
+                                            <div class="text-xs text-gray-500">Senior Customs Specialist</div>
+                                        </div>
+                                    </div>
+                                    <span class="text-xs text-green-600 bg-green-100 px-2 py-1 rounded-full">Approved</span>
+                                </div>
+                                <div class="text-sm text-gray-700 mb-2">
+                                    "Confirmed HS reclassification. This aligns with our Q3 ruling for similar textile products."
+                                </div>
+                                <div class="text-xs text-gray-500">2 minutes ago • Shipment #SC-2024-0156</div>
+                            </div>
+                            
+                            <div class="border rounded-lg p-4">
+                                <div class="flex items-center justify-between mb-3">
+                                    <div class="flex items-center space-x-3">
+                                        <div class="w-8 h-8 bg-purple-100 rounded-full flex items-center justify-center">
+                                            <span class="text-xs font-semibold text-purple-600">ML</span>
+                                        </div>
+                                        <div>
+                                            <div class="text-sm font-medium">Maria Lopez</div>
+                                            <div class="text-xs text-gray-500">Compliance Manager</div>
+                                        </div>
+                                    </div>
+                                    <span class="text-xs text-yellow-600 bg-yellow-100 px-2 py-1 rounded-full">In Review</span>
+                                </div>
+                                <div class="text-sm text-gray-700 mb-2">
+                                    "Need additional documentation for origin verification. Requesting COO certificate."
+                                </div>
+                                <div class="text-xs text-gray-500">15 minutes ago • Shipment #SC-2024-0157</div>
+                            </div>
+                            
+                            <div class="border rounded-lg p-4 bg-blue-50">
+                                <div class="text-sm font-medium text-blue-800 mb-2">Knowledge Base Update</div>
+                                <div class="text-sm text-gray-700 mb-2">
+                                    New rule added: "Vietnam textile FOB pricing guidelines updated per Q4 2024 market analysis"
+                                </div>
+                                <div class="text-xs text-gray-500">1 hour ago • Auto-generated from expert corrections</div>
+                            </div>
+                        </div>
+                        
+                        <div class="border-t pt-4">
+                            <div class="grid grid-cols-3 gap-4 text-center">
+                                <div>
+                                    <div class="text-lg font-bold text-blue-600">847</div>
+                                    <div class="text-xs text-gray-500">Reviews Completed</div>
+                                </div>
+                                <div>
+                                    <div class="text-lg font-bold text-green-600">94%</div>
+                                    <div class="text-xs text-gray-500">AI Accuracy Rate</div>
+                                </div>
+                                <div>
+                                    <div class="text-lg font-bold text-purple-600">23</div>
+                                    <div class="text-xs text-gray-500">Active Experts</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Integration & Performance -->
+<section class="py-20 bg-white">
+    <div class="container mx-auto px-6">
+        <div class="text-center mb-16">
+            <h2 class="text-4xl font-bold text-gray-800 mb-4" data-translate="integration.title">
+                Seamless Integration & Performance
+            </h2>
+            <p class="text-xl text-gray-600 max-w-3xl mx-auto" data-translate="integration.subtitle">
+                Our platform integrates with your existing systems and delivers measurable improvements from day one.
+            </p>
+        </div>
+        
+        <div class="grid lg:grid-cols-3 gap-8 mb-16">
+            <div class="text-center">
+                <div class="w-16 h-16 bg-blue-100 rounded-xl flex items-center justify-center mx-auto mb-4">
+                    <i class="fas fa-plug text-blue-600 text-2xl"></i>
+                </div>
+                <h3 class="text-xl font-semibold mb-4" data-translate="integration.api.title">RESTful API Integration</h3>
+                <p class="text-gray-600" data-translate="integration.api.desc">Connect with existing ERP, TMS, and customs systems through our comprehensive API suite.</p>
+            </div>
+            
+            <div class="text-center">
+                <div class="w-16 h-16 bg-green-100 rounded-xl flex items-center justify-center mx-auto mb-4">
+                    <i class="fas fa-cloud text-green-600 text-2xl"></i>
+                </div>
+                <h3 class="text-xl font-semibold mb-4" data-translate="integration.cloud.title">Cloud-Native Architecture</h3>
+                <p class="text-gray-600" data-translate="integration.cloud.desc">Scalable, secure, and always up-to-date. Deploy in days, not months.</p>
+            </div>
+            
+            <div class="text-center">
+                <div class="w-16 h-16 bg-purple-100 rounded-xl flex items-center justify-center mx-auto mb-4">
+                    <i class="fas fa-shield-alt text-purple-600 text-2xl"></i>
+                </div>
+                <h3 class="text-xl font-semibold mb-4" data-translate="integration.security.title">Enterprise Security</h3>
+                <p class="text-gray-600" data-translate="integration.security.desc">SOC 2 Type II compliant with end-to-end encryption and audit trails.</p>
+            </div>
+        </div>
+        
+        <!-- Performance Metrics -->
+        <div class="bg-gray-50 rounded-2xl p-8">
+            <h3 class="text-2xl font-bold text-center mb-8" data-translate="performance.title">Proven Performance Metrics</h3>
+            <div class="grid md:grid-cols-4 gap-8">
+                <div class="text-center">
+                    <div class="text-4xl font-bold text-blue-600 mb-2">3-5x</div>
+                    <div class="text-sm text-gray-600" data-translate="performance.efficiency">Processing Efficiency</div>
+                    <div class="text-xs text-gray-500 mt-1">vs manual review</div>
+                </div>
+                <div class="text-center">
+                    <div class="text-4xl font-bold text-green-600 mb-2">&lt;1%</div>
+                    <div class="text-sm text-gray-600" data-translate="performance.error">Error Rate</div>
+                    <div class="text-xs text-gray-500 mt-1">from 5-15% baseline</div>
+                </div>
+                <div class="text-center">
+                    <div class="text-4xl font-bold text-purple-600 mb-2">98.5%</div>
+                    <div class="text-sm text-gray-600" data-translate="performance.accuracy">Data Accuracy</div>
+                    <div class="text-xs text-gray-500 mt-1">multi-format documents</div>
+                </div>
+                <div class="text-center">
+                    <div class="text-4xl font-bold text-red-600 mb-2">70%</div>
+                    <div class="text-sm text-gray-600" data-translate="performance.cost">Cost Reduction</div>
+                    <div class="text-xs text-gray-500 mt-1">compliance operations</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- CTA Section -->
+<section class="py-20 bg-blue-600">
+    <div class="container mx-auto px-6 text-center">
+        <h2 class="text-4xl font-bold text-white mb-4" data-translate="features.cta.title">
+            Experience the Future of Customs Compliance
+        </h2>
+        <p class="text-xl text-blue-100 mb-8 max-w-2xl mx-auto" data-translate="features.cta.subtitle">
+            See how our 5 core modules work together to transform your customs operations. Start your free trial today.
+        </p>
+        <div class="space-x-4">
+            <button class="bg-white text-blue-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors" data-translate="features.cta.trial">
+                Start Free Trial
+            </button>
+            <button class="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors" data-translate="features.cta.demo">
+                Schedule Demo
+            </button>
+        </div>
+    </div>
+</section>
+
+<!-- Footer -->
+<footer class="bg-gray-900 text-white py-16">
+    <div class="container mx-auto px-6">
+        <div class="grid md:grid-cols-4 gap-8">
+            <div>
+                <div class="flex items-center space-x-2 mb-4">
+                    <div class="w-10 h-10 bg-gradient-to-br from-blue-600 to-purple-600 rounded-xl flex items-center justify-center">
+                        <i class="fas fa-brain text-white text-lg"></i>
+                    </div>
+                    <span class="text-xl font-bold" data-translate="brand">TradeGuard AI</span>
+                </div>
+                <p class="text-gray-400" data-translate="footer.desc">
+                    Revolutionizing customs compliance through AI-powered automation and expert collaboration.
+                </p>
+            </div>
+            
+            <div>
+                <h4 class="font-semibold mb-4" data-translate="footer.product">Product</h4>
+                <ul class="space-y-2 text-gray-400">
+                    <li><a href="features.html" class="hover:text-white transition-colors" data-translate="nav.features">Features</a></li>
+                    <li><a href="architecture.html" class="hover:text-white transition-colors" data-translate="nav.architecture">Architecture</a></li>
+                    <li><a href="pricing.html" class="hover:text-white transition-colors" data-translate="nav.pricing">Pricing</a></li>
+                </ul>
+            </div>
+            
+            <div>
+                <h4 class="font-semibold mb-4" data-translate="footer.company">Company</h4>
+                <ul class="space-y-2 text-gray-400">
+                    <li><a href="about.html" class="hover:text-white transition-colors" data-translate="nav.about">About Us</a></li>
+                    <li><a href="contact.html" class="hover:text-white transition-colors" data-translate="nav.contact">Contact</a></li>
+                </ul>
+            </div>
+            
+            <div>
+                <h4 class="font-semibold mb-4" data-translate="footer.connect">Connect</h4>
+                <div class="flex space-x-4">
+                    <a href="#" class="w-10 h-10 bg-gray-700 rounded-full flex items-center justify-center hover:bg-gray-600 transition-colors">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                    <a href="#" class="w-10 h-10 bg-gray-700 rounded-full flex items-center justify-center hover:bg-gray-600 transition-colors">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="border-t border-gray-700 mt-12 pt-8 text-center text-gray-400">
+            <p>&copy; 2025 TradeGuard AI. All rights reserved.</p>
+        </div>
+    </div>
+</footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,850 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Technical Architecture - TradeGuard AI Platform</title>
+    <meta name="description" content="Explore the advanced AI architecture powering TradeGuard AI. Learn about our LLM + Knowledge Graph + Multi-Modal AI fusion technology.">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+        .gradient-bg { background: linear-gradient(135deg, #1e3c72 0%, #2a5298 50%, #667eea 100%); }
+        .navbar-scroll { backdrop-filter: blur(10px); background-color: rgba(255, 255, 255, 0.95); }
+        .navbar-scroll .nav-text { color: #374151 !important; }
+        .navbar-scroll .nav-text:hover { color: #2563eb !important; }
+        .navbar-scroll .nav-active { color: #2563eb !important; }
+        .navbar-scroll .nav-brand { color: #1f2937 !important; }
+        .navbar-scroll .nav-select { color: #374151; border-color: #d1d5db; background-color: white; }
+        .nav-text { color: white !important; }
+        .nav-text:hover { color: #60a5fa !important; }
+        .nav-brand { color: white !important; }
+        .nav-select { color: white; border-color: rgba(255, 255, 255, 0.4); background-color: rgba(255, 255, 255, 0.15); }
+        .nav-select option { color: #1f2937; background-color: white; }
+        .tech-card { transition: all 0.3s ease; }
+        .tech-card:hover { transform: translateY(-8px); box-shadow: 0 20px 40px rgba(0,0,0,0.1); }
+        .architecture-flow { position: relative; }
+        .flow-line { position: absolute; width: 2px; background: linear-gradient(180deg, #667eea, #764ba2); }
+        .flow-connector { position: relative; }
+        .flow-connector::before { content: ''; position: absolute; top: 50%; left: 100%; width: 80px; height: 2px; background: linear-gradient(90deg, #667eea, #764ba2); transform: translateY(-50%); }
+        .flow-connector::after { content: ''; position: absolute; top: 50%; right: -6px; width: 0; height: 0; border-left: 6px solid #764ba2; border-top: 4px solid transparent; border-bottom: 4px solid transparent; transform: translateY(-50%); }
+        .tech-visualization { animation: pulse 2s infinite; }
+        .data-flow { animation: flow 3s linear infinite; }
+        @keyframes pulse { 0%, 100% { opacity: 0.8; } 50% { opacity: 1; } }
+        @keyframes flow { 0% { transform: translateX(-100%); } 100% { transform: translateX(100%); } }
+        .neural-network { background-image: radial-gradient(circle at 2px 2px, rgba(102, 126, 234, 0.3) 1px, transparent 0); background-size: 20px 20px; }
+    </style>
+</head>
+<body class="antialiased bg-white">
+
+<!-- Navigation -->
+<nav id="navbar" class="fixed w-full z-50 transition-all duration-300 py-4">
+    <div class="container mx-auto px-6">
+        <div class="flex justify-between items-center">
+            <div class="flex items-center space-x-2">
+                <div class="w-10 h-10 bg-gradient-to-br from-blue-600 to-purple-600 rounded-xl flex items-center justify-center">
+                    <i class="fas fa-brain text-white text-lg"></i>
+                </div>
+                <a href="index.html" class="text-xl font-bold nav-brand" data-translate="brand">TradeGuard AI</a>
+            </div>
+            
+            <div class="hidden md:flex space-x-8">
+                <a href="index.html" class="nav-text font-medium transition-colors" data-translate="nav.home">Home</a>
+                <a href="features.html" class="nav-text font-medium transition-colors" data-translate="nav.features">Features</a>
+                <a href="architecture.html" class="nav-text nav-active font-medium" data-translate="nav.architecture">Architecture</a>
+                <a href="solutions.html" class="nav-text font-medium transition-colors" data-translate="nav.solutions">Solutions</a>
+                <a href="pricing.html" class="nav-text font-medium transition-colors" data-translate="nav.pricing">Pricing</a>
+                <a href="about.html" class="nav-text font-medium transition-colors" data-translate="nav.about">About</a>
+                <a href="contact.html" class="nav-text font-medium transition-colors" data-translate="nav.contact">Contact</a>
+            </div>
+            
+            <div class="flex items-center space-x-4">
+                <div class="relative">
+                    <select id="languageSelector" class="nav-select bg-transparent rounded-lg px-3 py-2 text-sm focus:outline-none focus:border-blue-300 transition-colors">
+                        <option value="en">English</option>
+                        <option value="zh">中文</option>
+                        <option value="ja">日本語</option>
+                        <option value="vi">Tiếng Việt</option>
+                    </select>
+                </div>
+                <button class="bg-blue-600 text-white px-6 py-2 rounded-lg font-medium hover:bg-blue-700 transition-colors" data-translate="nav.demo">
+                    Request Demo
+                </button>
+            </div>
+        </div>
+    </div>
+</nav>
+
+<!-- Hero Section -->
+<section class="gradient-bg pt-28 pb-16">
+    <div class="container mx-auto px-6">
+        <div class="text-center text-white">
+            <h1 class="text-5xl font-bold mb-6" data-translate="architecture.hero.title">
+                AI-Native Architecture for Customs Intelligence
+            </h1>
+            <p class="text-xl text-blue-100 max-w-4xl mx-auto" data-translate="architecture.hero.subtitle">
+                Discover how our revolutionary fusion of Large Language Models, Knowledge Graphs, and Multi-Modal AI creates the most advanced customs compliance platform in the industry.
+            </p>
+        </div>
+    </div>
+</section>
+
+<!-- Architecture Overview -->
+<section class="py-20 bg-white">
+    <div class="container mx-auto px-6">
+        <div class="text-center mb-16">
+            <h2 class="text-4xl font-bold text-gray-800 mb-4" data-translate="architecture.overview.title">
+                Triple-Fusion AI Architecture
+            </h2>
+            <p class="text-xl text-gray-600 max-w-3xl mx-auto" data-translate="architecture.overview.subtitle">
+                Unlike traditional systems that add AI as an afterthought, we built our platform from the ground up around three core AI technologies working in perfect synergy.
+            </p>
+        </div>
+
+        <!-- Core Technologies -->
+        <div class="grid lg:grid-cols-3 gap-8 mb-16">
+            <div class="tech-card bg-gradient-to-br from-blue-50 to-blue-100 rounded-2xl p-8 text-center">
+                <div class="w-20 h-20 bg-blue-600 rounded-full flex items-center justify-center mx-auto mb-6 tech-visualization">
+                    <i class="fas fa-language text-white text-3xl"></i>
+                </div>
+                <h3 class="text-2xl font-bold text-blue-900 mb-4" data-translate="tech.llm.title">Large Language Models</h3>
+                <p class="text-blue-800 mb-6" data-translate="tech.llm.desc">Advanced natural language understanding for complex trade documents and regulatory text interpretation.</p>
+                <ul class="text-left text-sm text-blue-700 space-y-2">
+                    <li><i class="fas fa-check text-blue-600 mr-2"></i>Multi-language document comprehension</li>
+                    <li><i class="fas fa-check text-blue-600 mr-2"></i>Contextual meaning extraction</li>
+                    <li><i class="fas fa-check text-blue-600 mr-2"></i>Regulatory text analysis</li>
+                    <li><i class="fas fa-check text-blue-600 mr-2"></i>Semantic similarity matching</li>
+                </ul>
+            </div>
+            
+            <div class="tech-card bg-gradient-to-br from-purple-50 to-purple-100 rounded-2xl p-8 text-center">
+                <div class="w-20 h-20 bg-purple-600 rounded-full flex items-center justify-center mx-auto mb-6 tech-visualization">
+                    <i class="fas fa-project-diagram text-white text-3xl"></i>
+                </div>
+                <h3 class="text-2xl font-bold text-purple-900 mb-4" data-translate="tech.kg.title">Knowledge Graphs</h3>
+                <p class="text-purple-800 mb-6" data-translate="tech.kg.desc">Structured relationship mapping between commodities, regulations, entities, and trade rules for explainable reasoning.</p>
+                <ul class="text-left text-sm text-purple-700 space-y-2">
+                    <li><i class="fas fa-check text-purple-600 mr-2"></i>Entity relationship modeling</li>
+                    <li><i class="fas fa-check text-purple-600 mr-2"></i>Rule-based inference</li>
+                    <li><i class="fas fa-check text-purple-600 mr-2"></i>Fact verification & validation</li>
+                    <li><i class="fas fa-check text-purple-600 mr-2"></i>Explainable decision paths</li>
+                </ul>
+            </div>
+            
+            <div class="tech-card bg-gradient-to-br from-green-50 to-green-100 rounded-2xl p-8 text-center">
+                <div class="w-20 h-20 bg-green-600 rounded-full flex items-center justify-center mx-auto mb-6 tech-visualization">
+                    <i class="fas fa-eye text-white text-3xl"></i>
+                </div>
+                <h3 class="text-2xl font-bold text-green-900 mb-4" data-translate="tech.multimodal.title">Multi-Modal AI</h3>
+                <p class="text-green-800 mb-6" data-translate="tech.multimodal.desc">Computer vision and OCR capabilities for processing diverse document formats with industry-leading accuracy.</p>
+                <ul class="text-left text-sm text-green-700 space-y-2">
+                    <li><i class="fas fa-check text-green-600 mr-2"></i>Advanced OCR & document parsing</li>
+                    <li><i class="fas fa-check text-green-600 mr-2"></i>Image & PDF analysis</li>
+                    <li><i class="fas fa-check text-green-600 mr-2"></i>Layout understanding</li>
+                    <li><i class="fas fa-check text-green-600 mr-2"></i>Quality enhancement algorithms</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Detailed Architecture Flow -->
+<section class="py-20 bg-gray-50">
+    <div class="container mx-auto px-6">
+        <div class="text-center mb-16">
+            <h2 class="text-4xl font-bold text-gray-800 mb-4" data-translate="architecture.flow.title">
+                End-to-End Processing Architecture
+            </h2>
+            <p class="text-xl text-gray-600 max-w-3xl mx-auto" data-translate="architecture.flow.subtitle">
+                Follow the intelligent data journey from document upload to actionable compliance recommendations.
+            </p>
+        </div>
+
+        <!-- Architecture Diagram -->
+        <div class="bg-white rounded-2xl shadow-xl p-12 mb-16 neural-network">
+            <div class="space-y-12">
+                <!-- Input Layer -->
+                <div class="text-center">
+                    <div class="inline-flex items-center space-x-8">
+                        <div class="bg-blue-100 p-6 rounded-xl">
+                            <i class="fas fa-file-pdf text-blue-600 text-3xl mb-2"></i>
+                            <div class="text-sm font-medium text-gray-800">PDFs</div>
+                        </div>
+                        <div class="bg-green-100 p-6 rounded-xl">
+                            <i class="fas fa-file-image text-green-600 text-3xl mb-2"></i>
+                            <div class="text-sm font-medium text-gray-800">Images</div>
+                        </div>
+                        <div class="bg-purple-100 p-6 rounded-xl">
+                            <i class="fas fa-file-alt text-purple-600 text-3xl mb-2"></i>
+                            <div class="text-sm font-medium text-gray-800">Scanned Docs</div>
+                        </div>
+                    </div>
+                    <div class="mt-4">
+                        <span class="bg-gray-200 text-gray-700 px-4 py-2 rounded-full text-sm font-medium">Input Documents</span>
+                    </div>
+                </div>
+                
+                <!-- Arrow Down -->
+                <div class="text-center">
+                    <i class="fas fa-arrow-down text-blue-600 text-2xl"></i>
+                </div>
+                
+                <!-- Multi-Modal Processing -->
+                <div class="bg-gradient-to-r from-green-50 to-green-100 p-8 rounded-xl">
+                    <div class="text-center mb-6">
+                        <h3 class="text-2xl font-bold text-green-800">Multi-Modal AI Processing</h3>
+                    </div>
+                    <div class="grid md:grid-cols-3 gap-6">
+                        <div class="text-center">
+                            <div class="w-16 h-16 bg-green-200 rounded-full flex items-center justify-center mx-auto mb-3">
+                                <i class="fas fa-search text-green-700 text-xl"></i>
+                            </div>
+                            <h4 class="font-semibold text-green-800 mb-2">Document Detection</h4>
+                            <p class="text-sm text-green-700">Automatic classification and format detection</p>
+                        </div>
+                        <div class="text-center">
+                            <div class="w-16 h-16 bg-green-200 rounded-full flex items-center justify-center mx-auto mb-3">
+                                <i class="fas fa-text-width text-green-700 text-xl"></i>
+                            </div>
+                            <h4 class="font-semibold text-green-800 mb-2">OCR Extraction</h4>
+                            <p class="text-sm text-green-700">Multi-language text recognition and extraction</p>
+                        </div>
+                        <div class="text-center">
+                            <div class="w-16 h-16 bg-green-200 rounded-full flex items-center justify-center mx-auto mb-3">
+                                <i class="fas fa-sitemap text-green-700 text-xl"></i>
+                            </div>
+                            <h4 class="font-semibold text-green-800 mb-2">Layout Analysis</h4>
+                            <p class="text-sm text-green-700">Understanding document structure and relationships</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Arrow Down -->
+                <div class="text-center">
+                    <i class="fas fa-arrow-down text-blue-600 text-2xl"></i>
+                </div>
+                
+                <!-- LLM Processing -->
+                <div class="bg-gradient-to-r from-blue-50 to-blue-100 p-8 rounded-xl">
+                    <div class="text-center mb-6">
+                        <h3 class="text-2xl font-bold text-blue-800">Large Language Model Processing</h3>
+                    </div>
+                    <div class="grid md:grid-cols-4 gap-6">
+                        <div class="text-center">
+                            <div class="w-16 h-16 bg-blue-200 rounded-full flex items-center justify-center mx-auto mb-3">
+                                <i class="fas fa-brain text-blue-700 text-xl"></i>
+                            </div>
+                            <h4 class="font-semibold text-blue-800 mb-2">Context Understanding</h4>
+                            <p class="text-sm text-blue-700">Semantic interpretation of trade documents</p>
+                        </div>
+                        <div class="text-center">
+                            <div class="w-16 h-16 bg-blue-200 rounded-full flex items-center justify-center mx-auto mb-3">
+                                <i class="fas fa-tags text-blue-700 text-xl"></i>
+                            </div>
+                            <h4 class="font-semibold text-blue-800 mb-2">Entity Recognition</h4>
+                            <p class="text-sm text-blue-700">Identification of key trade entities and values</p>
+                        </div>
+                        <div class="text-center">
+                            <div class="w-16 h-16 bg-blue-200 rounded-full flex items-center justify-center mx-auto mb-3">
+                                <i class="fas fa-code-branch text-blue-700 text-xl"></i>
+                            </div>
+                            <h4 class="font-semibold text-blue-800 mb-2">Field Mapping</h4>
+                            <p class="text-sm text-blue-700">Intelligent mapping to customs declaration fields</p>
+                        </div>
+                        <div class="text-center">
+                            <div class="w-16 h-16 bg-blue-200 rounded-full flex items-center justify-center mx-auto mb-3">
+                                <i class="fas fa-language text-blue-700 text-xl"></i>
+                            </div>
+                            <h4 class="font-semibold text-blue-800 mb-2">Translation & Normalization</h4>
+                            <p class="text-sm text-blue-700">Multi-language support and data standardization</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Arrow Down -->
+                <div class="text-center">
+                    <i class="fas fa-arrow-down text-blue-600 text-2xl"></i>
+                </div>
+                
+                <!-- Knowledge Graph Integration -->
+                <div class="bg-gradient-to-r from-purple-50 to-purple-100 p-8 rounded-xl">
+                    <div class="text-center mb-6">
+                        <h3 class="text-2xl font-bold text-purple-800">Knowledge Graph Reasoning</h3>
+                    </div>
+                    <div class="grid md:grid-cols-3 gap-6">
+                        <div class="text-center">
+                            <div class="w-16 h-16 bg-purple-200 rounded-full flex items-center justify-center mx-auto mb-3">
+                                <i class="fas fa-database text-purple-700 text-xl"></i>
+                            </div>
+                            <h4 class="font-semibold text-purple-800 mb-2">Fact Verification</h4>
+                            <p class="text-sm text-purple-700">Cross-reference against regulatory databases</p>
+                        </div>
+                        <div class="text-center">
+                            <div class="w-16 h-16 bg-purple-200 rounded-full flex items-center justify-center mx-auto mb-3">
+                                <i class="fas fa-route text-purple-700 text-xl"></i>
+                            </div>
+                            <h4 class="font-semibold text-purple-800 mb-2">Relationship Analysis</h4>
+                            <p class="text-sm text-purple-700">Understanding entity connections and dependencies</p>
+                        </div>
+                        <div class="text-center">
+                            <div class="w-16 h-16 bg-purple-200 rounded-full flex items-center justify-center mx-auto mb-3">
+                                <i class="fas fa-lightbulb text-purple-700 text-xl"></i>
+                            </div>
+                            <h4 class="font-semibold text-purple-800 mb-2">Inference Engine</h4>
+                            <p class="text-sm text-purple-700">Rule-based reasoning and decision support</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Arrow Down -->
+                <div class="text-center">
+                    <i class="fas fa-arrow-down text-blue-600 text-2xl"></i>
+                </div>
+                
+                <!-- Output Layer -->
+                <div class="text-center">
+                    <div class="inline-flex items-center space-x-8">
+                        <div class="bg-red-100 p-6 rounded-xl">
+                            <i class="fas fa-exclamation-triangle text-red-600 text-3xl mb-2"></i>
+                            <div class="text-sm font-medium text-gray-800">Risk Alerts</div>
+                        </div>
+                        <div class="bg-yellow-100 p-6 rounded-xl">
+                            <i class="fas fa-lightbulb text-yellow-600 text-3xl mb-2"></i>
+                            <div class="text-sm font-medium text-gray-800">Recommendations</div>
+                        </div>
+                        <div class="bg-green-100 p-6 rounded-xl">
+                            <i class="fas fa-check-circle text-green-600 text-3xl mb-2"></i>
+                            <div class="text-sm font-medium text-gray-800">Compliance Report</div>
+                        </div>
+                    </div>
+                    <div class="mt-4">
+                        <span class="bg-gray-200 text-gray-700 px-4 py-2 rounded-full text-sm font-medium">Actionable Outputs</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Technical Deep Dive -->
+<section class="py-20 bg-white">
+    <div class="container mx-auto px-6">
+        <div class="text-center mb-16">
+            <h2 class="text-4xl font-bold text-gray-800 mb-4" data-translate="architecture.deepdive.title">
+                Technical Implementation Details
+            </h2>
+            <p class="text-xl text-gray-600 max-w-3xl mx-auto" data-translate="architecture.deepdive.subtitle">
+                Understand the sophisticated engineering that powers our AI-native customs compliance platform.
+            </p>
+        </div>
+        
+        <div class="space-y-16">
+            <!-- LLM Deep Dive -->
+            <div class="grid lg:grid-cols-2 gap-12 items-center">
+                <div>
+                    <div class="flex items-center mb-6">
+                        <div class="w-16 h-16 bg-blue-100 rounded-xl flex items-center justify-center mr-4">
+                            <i class="fas fa-language text-blue-600 text-2xl"></i>
+                        </div>
+                        <div>
+                            <span class="text-blue-600 font-semibold text-sm uppercase tracking-wide">LLM Layer</span>
+                            <h3 class="text-3xl font-bold text-gray-800" data-translate="llm.deepdive.title">Advanced Language Understanding</h3>
+                        </div>
+                    </div>
+                    
+                    <p class="text-xl text-gray-600 mb-8" data-translate="llm.deepdive.description">
+                        Our fine-tuned language models excel at understanding complex trade terminology, multi-language documents, and nuanced regulatory language.
+                    </p>
+                    
+                    <div class="space-y-6">
+                        <div class="bg-blue-50 p-6 rounded-lg">
+                            <h4 class="font-semibold text-blue-900 mb-3" data-translate="llm.capabilities.title">Core Capabilities</h4>
+                            <ul class="space-y-2 text-blue-800">
+                                <li><i class="fas fa-check text-blue-600 mr-3"></i>Multi-domain fine-tuning on customs and trade datasets</li>
+                                <li><i class="fas fa-check text-blue-600 mr-3"></i>Context-aware entity extraction with 98.5% accuracy</li>
+                                <li><i class="fas fa-check text-blue-600 mr-3"></i>Semantic similarity matching for product classification</li>
+                                <li><i class="fas fa-check text-blue-600 mr-3"></i>Real-time regulation interpretation and mapping</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="bg-gray-50 p-6 rounded-lg">
+                            <h4 class="font-semibold text-gray-900 mb-3" data-translate="llm.performance.title">Performance Metrics</h4>
+                            <div class="grid grid-cols-2 gap-4">
+                                <div>
+                                    <div class="text-2xl font-bold text-blue-600">98.5%</div>
+                                    <div class="text-sm text-gray-600">Entity Extraction Accuracy</div>
+                                </div>
+                                <div>
+                                    <div class="text-2xl font-bold text-blue-600">25+</div>
+                                    <div class="text-sm text-gray-600">Supported Languages</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="relative">
+                    <div class="bg-white rounded-2xl shadow-xl p-8 border-l-4 border-blue-500">
+                        <div class="space-y-4">
+                            <div class="text-sm text-gray-500 uppercase tracking-wide">LLM Processing Example</div>
+                            
+                            <div class="bg-gray-100 p-4 rounded-lg">
+                                <div class="text-xs text-gray-500 mb-2">Raw Input Text</div>
+                                <div class="text-sm font-mono">
+                                    "Women's cotton t-shirts, 100% cotton, short sleeves, 
+                                    round neck, Made in Vietnam, various colors and sizes"
+                                </div>
+                            </div>
+                            
+                            <div class="flex justify-center">
+                                <div class="w-6 h-6 border-2 border-blue-600 border-t-transparent rounded-full animate-spin"></div>
+                            </div>
+                            
+                            <div class="bg-blue-50 p-4 rounded-lg">
+                                <div class="text-xs text-blue-700 mb-2">Extracted Entities</div>
+                                <div class="space-y-1 text-sm">
+                                    <div class="flex justify-between">
+                                        <span class="text-gray-600">Product Category:</span>
+                                        <span class="font-semibold text-blue-800">Apparel → Women's → T-shirts</span>
+                                    </div>
+                                    <div class="flex justify-between">
+                                        <span class="text-gray-600">Material:</span>
+                                        <span class="font-semibold text-blue-800">100% Cotton</span>
+                                    </div>
+                                    <div class="flex justify-between">
+                                        <span class="text-gray-600">Origin Country:</span>
+                                        <span class="font-semibold text-blue-800">Vietnam (VN)</span>
+                                    </div>
+                                    <div class="flex justify-between">
+                                        <span class="text-gray-600">Suggested HS Code:</span>
+                                        <span class="font-semibold text-green-600">6109.10.00</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Knowledge Graph Deep Dive -->
+            <div class="grid lg:grid-cols-2 gap-12 items-center">
+                <div class="order-2 lg:order-1">
+                    <div class="bg-white rounded-2xl shadow-xl p-8 border-l-4 border-purple-500">
+                        <div class="space-y-6">
+                            <div class="text-sm text-gray-500 uppercase tracking-wide">Knowledge Graph Structure</div>
+                            
+                            <!-- Graph Visualization -->
+                            <div class="relative">
+                                <svg viewBox="0 0 400 300" class="w-full h-64">
+                                    <!-- Nodes -->
+                                    <circle cx="200" cy="50" r="25" fill="#8B5CF6" class="animate-pulse" />
+                                    <text x="200" y="55" text-anchor="middle" class="text-xs fill-white font-semibold">Product</text>
+                                    
+                                    <circle cx="100" cy="150" r="20" fill="#3B82F6" class="animate-pulse" />
+                                    <text x="100" y="155" text-anchor="middle" class="text-xs fill-white font-semibold">HS Code</text>
+                                    
+                                    <circle cx="300" cy="150" r="20" fill="#10B981" class="animate-pulse" />
+                                    <text x="300" y="155" text-anchor="middle" class="text-xs fill-white font-semibold">Origin</text>
+                                    
+                                    <circle cx="50" cy="250" r="18" fill="#F59E0B" class="animate-pulse" />
+                                    <text x="50" y="255" text-anchor="middle" class="text-xs fill-white font-semibold">Tariff</text>
+                                    
+                                    <circle cx="200" cy="250" r="18" fill="#EF4444" class="animate-pulse" />
+                                    <text x="200" y="255" text-anchor="middle" class="text-xs fill-white font-semibold">Regulation</text>
+                                    
+                                    <circle cx="350" cy="250" r="18" fill="#06B6D4" class="animate-pulse" />
+                                    <text x="350" y="255" text-anchor="middle" class="text-xs fill-white font-semibold">Trade Agreement</text>
+                                    
+                                    <!-- Connections -->
+                                    <line x1="200" y1="75" x2="100" y2="130" stroke="#667eea" stroke-width="2" />
+                                    <line x1="200" y1="75" x2="300" y2="130" stroke="#667eea" stroke-width="2" />
+                                    <line x1="100" y1="170" x2="50" y2="232" stroke="#667eea" stroke-width="2" />
+                                    <line x1="100" y1="170" x2="200" y2="232" stroke="#667eea" stroke-width="2" />
+                                    <line x1="300" y1="170" x2="350" y2="232" stroke="#667eea" stroke-width="2" />
+                                    
+                                    <!-- Labels on edges -->
+                                    <text x="150" y="105" class="text-xs fill-gray-600">classifies_as</text>
+                                    <text x="250" y="105" class="text-xs fill-gray-600">manufactured_in</text>
+                                    <text x="75" y="210" class="text-xs fill-gray-600">applies</text>
+                                    <text x="275" y="210" class="text-xs fill-gray-600">qualifies_for</text>
+                                </svg>
+                            </div>
+                            
+                            <div class="bg-purple-50 p-4 rounded-lg">
+                                <div class="text-xs text-purple-700 mb-2">Inference Example</div>
+                                <div class="text-sm text-purple-800">
+                                    <div class="font-semibold mb-2">Query: Cotton T-shirt from Vietnam to USA</div>
+                                    <div class="space-y-1 text-xs">
+                                        <div>1. Product → HS Code: 6109.10.00 (Cotton T-shirts)</div>
+                                        <div>2. Vietnam → USA: Check USMCA qualification</div>
+                                        <div>3. HS 6109.10.00 + Vietnam origin → Duty rate: 16.5%</div>
+                                        <div>4. Required docs: Certificate of Origin, Commercial Invoice</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="order-1 lg:order-2">
+                    <div class="flex items-center mb-6">
+                        <div class="w-16 h-16 bg-purple-100 rounded-xl flex items-center justify-center mr-4">
+                            <i class="fas fa-project-diagram text-purple-600 text-2xl"></i>
+                        </div>
+                        <div>
+                            <span class="text-purple-600 font-semibold text-sm uppercase tracking-wide">Knowledge Layer</span>
+                            <h3 class="text-3xl font-bold text-gray-800" data-translate="kg.deepdive.title">Structured Reasoning Engine</h3>
+                        </div>
+                    </div>
+                    
+                    <p class="text-xl text-gray-600 mb-8" data-translate="kg.deepdive.description">
+                        Our knowledge graph models complex relationships between products, regulations, countries, and trade rules, enabling explainable AI decisions.
+                    </p>
+                    
+                    <div class="space-y-6">
+                        <div class="bg-purple-50 p-6 rounded-lg">
+                            <h4 class="font-semibold text-purple-900 mb-3" data-translate="kg.entities.title">Key Entities & Relationships</h4>
+                            <div class="grid grid-cols-2 gap-4 text-sm">
+                                <div>
+                                    <div class="font-semibold text-purple-800 mb-2">Products</div>
+                                    <ul class="text-purple-700 space-y-1">
+                                        <li>• HS Classification hierarchy</li>
+                                        <li>• Material compositions</li>
+                                        <li>• Manufacturing processes</li>
+                                    </ul>
+                                </div>
+                                <div>
+                                    <div class="font-semibold text-purple-800 mb-2">Regulations</div>
+                                    <ul class="text-purple-700 space-y-1">
+                                        <li>• Tariff schedules</li>
+                                        <li>• Trade agreements</li>
+                                        <li>• Licensing requirements</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="bg-gray-50 p-6 rounded-lg">
+                            <h4 class="font-semibold text-gray-900 mb-3" data-translate="kg.scale.title">Scale & Performance</h4>
+                            <div class="grid grid-cols-2 gap-4">
+                                <div>
+                                    <div class="text-2xl font-bold text-purple-600">50M+</div>
+                                    <div class="text-sm text-gray-600">Entities & Relationships</div>
+                                </div>
+                                <div>
+                                    <div class="text-2xl font-bold text-purple-600">&lt;100ms</div>
+                                    <div class="text-sm text-gray-600">Query Response Time</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Multi-Modal AI Deep Dive -->
+            <div class="grid lg:grid-cols-2 gap-12 items-center">
+                <div>
+                    <div class="flex items-center mb-6">
+                        <div class="w-16 h-16 bg-green-100 rounded-xl flex items-center justify-center mr-4">
+                            <i class="fas fa-eye text-green-600 text-2xl"></i>
+                        </div>
+                        <div>
+                            <span class="text-green-600 font-semibold text-sm uppercase tracking-wide">Vision Layer</span>
+                            <h3 class="text-3xl font-bold text-gray-800" data-translate="multimodal.deepdive.title">Advanced Document Intelligence</h3>
+                        </div>
+                    </div>
+                    
+                    <p class="text-xl text-gray-600 mb-8" data-translate="multimodal.deepdive.description">
+                        State-of-the-art computer vision models process any document format with human-level accuracy, understanding both content and layout.
+                    </p>
+                    
+                    <div class="space-y-6">
+                        <div class="bg-green-50 p-6 rounded-lg">
+                            <h4 class="font-semibold text-green-900 mb-3" data-translate="multimodal.pipeline.title">Processing Pipeline</h4>
+                            <div class="space-y-3">
+                                <div class="flex items-center space-x-3">
+                                    <div class="w-8 h-8 bg-green-200 rounded-full flex items-center justify-center flex-shrink-0">
+                                        <span class="text-green-800 font-bold text-sm">1</span>
+                                    </div>
+                                    <div>
+                                        <div class="font-semibold text-green-800">Image Preprocessing</div>
+                                        <div class="text-sm text-green-700">Noise reduction, skew correction, enhancement</div>
+                                    </div>
+                                </div>
+                                <div class="flex items-center space-x-3">
+                                    <div class="w-8 h-8 bg-green-200 rounded-full flex items-center justify-center flex-shrink-0">
+                                        <span class="text-green-800 font-bold text-sm">2</span>
+                                    </div>
+                                    <div>
+                                        <div class="font-semibold text-green-800">Layout Detection</div>
+                                        <div class="text-sm text-green-700">Table identification, text blocks, form fields</div>
+                                    </div>
+                                </div>
+                                <div class="flex items-center space-x-3">
+                                    <div class="w-8 h-8 bg-green-200 rounded-full flex items-center justify-center flex-shrink-0">
+                                        <span class="text-green-800 font-bold text-sm">3</span>
+                                    </div>
+                                    <div>
+                                        <div class="font-semibold text-green-800">Multi-Language OCR</div>
+                                        <div class="text-sm text-green-700">Character recognition with context awareness</div>
+                                    </div>
+                                </div>
+                                <div class="flex items-center space-x-3">
+                                    <div class="w-8 h-8 bg-green-200 rounded-full flex items-center justify-center flex-shrink-0">
+                                        <span class="text-green-800 font-bold text-sm">4</span>
+                                    </div>
+                                    <div>
+                                        <div class="font-semibold text-green-800">Content Structuring</div>
+                                        <div class="text-sm text-green-700">Logical grouping and relationship mapping</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="bg-gray-50 p-6 rounded-lg">
+                            <h4 class="font-semibold text-gray-900 mb-3" data-translate="multimodal.accuracy.title">Accuracy Benchmarks</h4>
+                            <div class="grid grid-cols-2 gap-4">
+                                <div>
+                                    <div class="text-2xl font-bold text-green-600">99.2%</div>
+                                    <div class="text-sm text-gray-600">Print Text Recognition</div>
+                                </div>
+                                <div>
+                                    <div class="text-2xl font-bold text-green-600">96.8%</div>
+                                    <div class="text-sm text-gray-600">Handwritten Text</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="relative">
+                    <div class="bg-white rounded-2xl shadow-xl p-8 border-l-4 border-green-500">
+                        <div class="space-y-6">
+                            <div class="text-sm text-gray-500 uppercase tracking-wide">Document Processing Stages</div>
+                            
+                            <!-- Original Document -->
+                            <div class="bg-gray-100 p-4 rounded-lg">
+                                <div class="text-xs text-gray-500 mb-2">Stage 1: Raw Document</div>
+                                <div class="border border-gray-300 bg-white p-3 rounded">
+                                    <div class="text-xs text-gray-400 mb-2">[Scanned Invoice Image]</div>
+                                    <div class="space-y-1 text-xs">
+                                        <div class="bg-gray-200 h-2 w-3/4 rounded"></div>
+                                        <div class="bg-gray-200 h-2 w-1/2 rounded"></div>
+                                        <div class="bg-gray-200 h-2 w-5/6 rounded"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- Layout Detection -->
+                            <div class="bg-blue-50 p-4 rounded-lg">
+                                <div class="text-xs text-blue-700 mb-2">Stage 2: Layout Detection</div>
+                                <div class="border border-blue-300 bg-white p-3 rounded">
+                                    <div class="grid grid-cols-2 gap-2">
+                                        <div class="border border-red-300 bg-red-50 p-2 rounded text-xs">Header</div>
+                                        <div class="border border-green-300 bg-green-50 p-2 rounded text-xs">Shipper Info</div>
+                                        <div class="border border-yellow-300 bg-yellow-50 p-2 rounded text-xs col-span-2">Items Table</div>
+                                        <div class="border border-purple-300 bg-purple-50 p-2 rounded text-xs">Totals</div>
+                                        <div class="border border-blue-300 bg-blue-50 p-2 rounded text-xs">Signatures</div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- Extracted Data -->
+                            <div class="bg-green-50 p-4 rounded-lg">
+                                <div class="text-xs text-green-700 mb-2">Stage 3: Structured Output</div>
+                                <div class="bg-white p-3 rounded border border-green-300">
+                                    <div class="space-y-2 text-xs">
+                                        <div class="flex justify-between">
+                                            <span class="text-gray-600">Invoice #:</span>
+                                            <span class="font-semibold">INV-2024-0156</span>
+                                        </div>
+                                        <div class="flex justify-between">
+                                            <span class="text-gray-600">Shipper:</span>
+                                            <span class="font-semibold">ABC Trading Co.</span>
+                                        </div>
+                                        <div class="flex justify-between">
+                                            <span class="text-gray-600">Total Value:</span>
+                                            <span class="font-semibold">$17,500.00</span>
+                                        </div>
+                                        <div class="flex justify-between">
+                                            <span class="text-gray-600">Items:</span>
+                                            <span class="font-semibold">5,000 pcs T-shirts</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Competitive Advantages -->
+<section class="py-20 bg-gray-50">
+    <div class="container mx-auto px-6">
+        <div class="text-center mb-16">
+            <h2 class="text-4xl font-bold text-gray-800 mb-4" data-translate="architecture.advantages.title">
+                Why Our Architecture Wins
+            </h2>
+            <p class="text-xl text-gray-600 max-w-3xl mx-auto" data-translate="architecture.advantages.subtitle">
+                Understanding the strategic advantages of our AI-native approach over traditional systems and simple AI wrappers.
+            </p>
+        </div>
+        
+        <div class="grid lg:grid-cols-3 gap-8">
+            <div class="bg-white rounded-xl p-8 shadow-lg">
+                <div class="w-16 h-16 bg-red-100 rounded-xl flex items-center justify-center mb-6">
+                    <i class="fas fa-times text-red-600 text-2xl"></i>
+                </div>
+                <h3 class="text-xl font-bold text-gray-800 mb-4" data-translate="comparison.traditional.title">Traditional Systems</h3>
+                <ul class="space-y-3 text-gray-600">
+                    <li class="flex items-start space-x-3">
+                        <i class="fas fa-times text-red-500 mt-1 flex-shrink-0"></i>
+                        <span>Rule-based processing breaks with new formats</span>
+                    </li>
+                    <li class="flex items-start space-x-3">
+                        <i class="fas fa-times text-red-500 mt-1 flex-shrink-0"></i>
+                        <span>Manual template creation for each document type</span>
+                    </li>
+                    <li class="flex items-start space-x-3">
+                        <i class="fas fa-times text-red-500 mt-1 flex-shrink-0"></i>
+                        <span>No learning capability or adaptation</span>
+                    </li>
+                    <li class="flex items-start space-x-3">
+                        <i class="fas fa-times text-red-500 mt-1 flex-shrink-0"></i>
+                        <span>Complex implementation and maintenance</span>
+                    </li>
+                </ul>
+            </div>
+            
+            <div class="bg-white rounded-xl p-8 shadow-lg">
+                <div class="w-16 h-16 bg-yellow-100 rounded-xl flex items-center justify-center mb-6">
+                    <i class="fas fa-exclamation text-yellow-600 text-2xl"></i>
+                </div>
+                <h3 class="text-xl font-bold text-gray-800 mb-4" data-translate="comparison.simple.title">Simple AI Wrappers</h3>
+                <ul class="space-y-3 text-gray-600">
+                    <li class="flex items-start space-x-3">
+                        <i class="fas fa-exclamation text-yellow-500 mt-1 flex-shrink-0"></i>
+                        <span>Black box decisions without explanations</span>
+                    </li>
+                    <li class="flex items-start space-x-3">
+                        <i class="fas fa-exclamation text-yellow-500 mt-1 flex-shrink-0"></i>
+                        <span>Hallucination risks in critical compliance</span>
+                    </li>
+                    <li class="flex items-start space-x-3">
+                        <i class="fas fa-exclamation text-yellow-500 mt-1 flex-shrink-0"></i>
+                        <span>No regulatory knowledge integration</span>
+                    </li>
+                    <li class="flex items-start space-x-3">
+                        <i class="fas fa-exclamation text-yellow-500 mt-1 flex-shrink-0"></i>
+                        <span>Limited accuracy on domain-specific tasks</span>
+                    </li>
+                </ul>
+            </div>
+            
+            <div class="bg-white rounded-xl p-8 shadow-lg border-2 border-green-500">
+                <div class="w-16 h-16 bg-green-100 rounded-xl flex items-center justify-center mb-6">
+                    <i class="fas fa-check text-green-600 text-2xl"></i>
+                </div>
+                <h3 class="text-xl font-bold text-gray-800 mb-4" data-translate="comparison.ours.title">TradeGuard AI</h3>
+                <ul class="space-y-3 text-gray-600">
+                    <li class="flex items-start space-x-3">
+                        <i class="fas fa-check text-green-500 mt-1 flex-shrink-0"></i>
+                        <span>Explainable AI with full audit trails</span>
+                    </li>
+                    <li class="flex items-start space-x-3">
+                        <i class="fas fa-check text-green-500 mt-1 flex-shrink-0"></i>
+                        <span>Continuous learning from expert feedback</span>
+                    </li>
+                    <li class="flex items-start space-x-3">
+                        <i class="fas fa-check text-green-500 mt-1 flex-shrink-0"></i>
+                        <span>Deep regulatory knowledge integration</span>
+                    </li>
+                    <li class="flex items-start space-x-3">
+                        <i class="fas fa-check text-green-500 mt-1 flex-shrink-0"></i>
+                        <span>Enterprise-grade accuracy and reliability</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- CTA Section -->
+<section class="py-20 bg-blue-600">
+    <div class="container mx-auto px-6 text-center">
+        <h2 class="text-4xl font-bold text-white mb-4" data-translate="architecture.cta.title">
+            Experience Our Advanced AI Architecture
+        </h2>
+        <p class="text-xl text-blue-100 mb-8 max-w-2xl mx-auto" data-translate="architecture.cta.subtitle">
+            See how our triple-fusion AI technology transforms customs compliance. Schedule a technical deep-dive with our team.
+        </p>
+        <div class="space-x-4">
+            <button class="bg-white text-blue-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors" data-translate="architecture.cta.demo">
+                Technical Demo
+            </button>
+            <button class="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors" data-translate="architecture.cta.whitepaper">
+                Download Whitepaper
+            </button>
+        </div>
+    </div>
+</section>
+
+<!-- Footer -->
+<footer class="bg-gray-900 text-white py-16">
+    <div class="container mx-auto px-6">
+        <div class="grid md:grid-cols-4 gap-8">
+            <div>
+                <div class="flex items-center space-x-2 mb-4">
+                    <div class="w-10 h-10 bg-gradient-to-br from-blue-600 to-purple-600 rounded-xl flex items-center justify-center">
+                        <i class="fas fa-brain text-white text-lg"></i>
+                    </div>
+                    <span class="text-xl font-bold" data-translate="brand">TradeGuard AI</span>
+                </div>
+                <p class="text-gray-400" data-translate="footer.desc">
+                    Revolutionizing customs compliance through AI-powered automation and expert collaboration.
+                </p>
+            </div>
+            
+            <div>
+                <h4 class="font-semibold mb-4" data-translate="footer.product">Product</h4>
+                <ul class="space-y-2 text-gray-400">
+                    <li><a href="features.html" class="hover:text-white transition-colors" data-translate="nav.features">Features</a></li>
+                    <li><a href="architecture.html" class="hover:text-white transition-colors" data-translate="nav.architecture">Architecture</a></li>
+                    <li><a href="pricing.html" class="hover:text-white transition-colors" data-translate="nav.pricing">Pricing</a></li>
+                </ul>
+            </div>
+            
+            <div>
+                <h4 class="font-semibold mb-4" data-translate="footer.company">Company</h4>
+                <ul class="space-y-2 text-gray-400">
+                    <li><a href="about.html" class="hover:text-white transition-colors" data-translate="nav.about">About Us</a></li>
+                    <li><a href="contact.html" class="hover:text-white transition-colors" data-translate="nav.contact">Contact</a></li>
+                </ul>
+            </div>
+            
+            <div>
+                <h4 class="font-semibold mb-4" data-translate="footer.connect">Connect</h4>
+                <div class="flex space-x-4">
+                    <a href="#" class="w-10 h-10 bg-gray-700 rounded-full flex items-center justify-center hover:bg-gray-600 transition-colors">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                    <a href="#" class="w-10 h-10 bg-gray-700 rounded-full flex items-center justify-center hover:bg-gray-600 transition-colors">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="border-t border-gray-700 mt-12 pt-8 text-center text-gray-400">
+            <p>&copy; 2025 TradeGuard AI. All rights reserved.</p>
+        </div>
+    </div>
+</footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>
