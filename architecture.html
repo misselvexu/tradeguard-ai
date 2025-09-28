@@ -361,10 +361,10 @@
                         <div class="bg-blue-50 p-6 rounded-lg">
                             <h4 class="font-semibold text-blue-900 mb-3" data-translate="llm.capabilities.title">Core Capabilities</h4>
                             <ul class="space-y-2 text-blue-800">
-                                <li><i class="fas fa-check text-blue-600 mr-3"></i>Multi-domain fine-tuning on customs and trade datasets</li>
-                                <li><i class="fas fa-check text-blue-600 mr-3"></i>Context-aware entity extraction with 98.5% accuracy</li>
-                                <li><i class="fas fa-check text-blue-600 mr-3"></i>Semantic similarity matching for product classification</li>
-                                <li><i class="fas fa-check text-blue-600 mr-3"></i>Real-time regulation interpretation and mapping</li>
+                                <li><i class="fas fa-check text-blue-600 mr-3"></i><span data-translate="arch.llm.capability1">Multi-domain fine-tuning on customs and trade datasets</span></li>
+                                <li><i class="fas fa-check text-blue-600 mr-3"></i><span data-translate="arch.llm.capability2">Context-aware entity extraction with 98.5% accuracy</span></li>
+                                <li><i class="fas fa-check text-blue-600 mr-3"></i><span data-translate="arch.llm.capability3">Semantic similarity matching for product classification</span></li>
+                                <li><i class="fas fa-check text-blue-600 mr-3"></i><span data-translate="arch.llm.capability4">Real-time regulation interpretation and mapping</span></li>
                             </ul>
                         </div>
                         
@@ -373,11 +373,11 @@
                             <div class="grid grid-cols-2 gap-4">
                                 <div>
                                     <div class="text-2xl font-bold text-blue-600">98.5%</div>
-                                    <div class="text-sm text-gray-600">Entity Extraction Accuracy</div>
+                                    <div class="text-sm text-gray-600" data-translate="arch.llm.metric1">Entity Extraction Accuracy</div>
                                 </div>
                                 <div>
                                     <div class="text-2xl font-bold text-blue-600">25+</div>
-                                    <div class="text-sm text-gray-600">Supported Languages</div>
+                                    <div class="text-sm text-gray-600" data-translate="arch.llm.metric2">Supported Languages</div>
                                 </div>
                             </div>
                         </div>
@@ -507,19 +507,19 @@
                             <h4 class="font-semibold text-purple-900 mb-3" data-translate="kg.entities.title">Key Entities & Relationships</h4>
                             <div class="grid grid-cols-2 gap-4 text-sm">
                                 <div>
-                                    <div class="font-semibold text-purple-800 mb-2">Products</div>
+                                    <div class="font-semibold text-purple-800 mb-2" data-translate="arch.kg.category1">Products</div>
                                     <ul class="text-purple-700 space-y-1">
-                                        <li>• HS Classification hierarchy</li>
-                                        <li>• Material compositions</li>
-                                        <li>• Manufacturing processes</li>
+                                        <li data-translate="arch.kg.product1">• HS Classification hierarchy</li>
+                                        <li data-translate="arch.kg.product2">• Material compositions</li>
+                                        <li data-translate="arch.kg.product3">• Manufacturing processes</li>
                                     </ul>
                                 </div>
                                 <div>
-                                    <div class="font-semibold text-purple-800 mb-2">Regulations</div>
+                                    <div class="font-semibold text-purple-800 mb-2" data-translate="arch.kg.category2">Regulations</div>
                                     <ul class="text-purple-700 space-y-1">
-                                        <li>• Tariff schedules</li>
-                                        <li>• Trade agreements</li>
-                                        <li>• Licensing requirements</li>
+                                        <li data-translate="arch.kg.regulation1">• Tariff schedules</li>
+                                        <li data-translate="arch.kg.regulation2">• Trade agreements</li>
+                                        <li data-translate="arch.kg.regulation3">• Licensing requirements</li>
                                     </ul>
                                 </div>
                             </div>
@@ -530,7 +530,7 @@
                             <div class="grid grid-cols-2 gap-4">
                                 <div>
                                     <div class="text-2xl font-bold text-purple-600">50M+</div>
-                                    <div class="text-sm text-gray-600">Entities & Relationships</div>
+                                    <div class="text-sm text-gray-600" data-translate="arch.kg.metric1">Entities & Relationships</div>
                                 </div>
                                 <div>
                                     <div class="text-2xl font-bold text-purple-600">&lt;100ms</div>
@@ -568,8 +568,8 @@
                                         <span class="text-green-800 font-bold text-sm">1</span>
                                     </div>
                                     <div>
-                                        <div class="font-semibold text-green-800">Image Preprocessing</div>
-                                        <div class="text-sm text-green-700">Noise reduction, skew correction, enhancement</div>
+                                        <div class="font-semibold text-green-800" data-translate="arch.multimodal.step1.title">Image Preprocessing</div>
+                                        <div class="text-sm text-green-700" data-translate="arch.multimodal.step1.desc">Noise reduction, skew correction, enhancement</div>
                                     </div>
                                 </div>
                                 <div class="flex items-center space-x-3">
@@ -577,8 +577,8 @@
                                         <span class="text-green-800 font-bold text-sm">2</span>
                                     </div>
                                     <div>
-                                        <div class="font-semibold text-green-800">Layout Detection</div>
-                                        <div class="text-sm text-green-700">Table identification, text blocks, form fields</div>
+                                        <div class="font-semibold text-green-800" data-translate="arch.multimodal.step2.title">Layout Detection</div>
+                                        <div class="text-sm text-green-700" data-translate="arch.multimodal.step2.desc">Table identification, text blocks, form fields</div>
                                     </div>
                                 </div>
                                 <div class="flex items-center space-x-3">
@@ -586,8 +586,8 @@
                                         <span class="text-green-800 font-bold text-sm">3</span>
                                     </div>
                                     <div>
-                                        <div class="font-semibold text-green-800">Multi-Language OCR</div>
-                                        <div class="text-sm text-green-700">Character recognition with context awareness</div>
+                                        <div class="font-semibold text-green-800" data-translate="arch.multimodal.step3.title">Multi-Language OCR</div>
+                                        <div class="text-sm text-green-700" data-translate="arch.multimodal.step3.desc">Character recognition with context awareness</div>
                                     </div>
                                 </div>
                                 <div class="flex items-center space-x-3">
@@ -595,8 +595,8 @@
                                         <span class="text-green-800 font-bold text-sm">4</span>
                                     </div>
                                     <div>
-                                        <div class="font-semibold text-green-800">Content Structuring</div>
-                                        <div class="text-sm text-green-700">Logical grouping and relationship mapping</div>
+                                        <div class="font-semibold text-green-800" data-translate="arch.multimodal.step4.title">Content Structuring</div>
+                                        <div class="text-sm text-green-700" data-translate="arch.multimodal.step4.desc">Logical grouping and relationship mapping</div>
                                     </div>
                                 </div>
                             </div>
@@ -703,19 +703,19 @@
                 <ul class="space-y-3 text-gray-600">
                     <li class="flex items-start space-x-3">
                         <i class="fas fa-times text-red-500 mt-1 flex-shrink-0"></i>
-                        <span>Rule-based processing breaks with new formats</span>
+                        <span data-translate="arch.comparison.traditional.point1">Rule-based processing breaks with new formats</span>
                     </li>
                     <li class="flex items-start space-x-3">
                         <i class="fas fa-times text-red-500 mt-1 flex-shrink-0"></i>
-                        <span>Manual template creation for each document type</span>
+                        <span data-translate="arch.comparison.traditional.point2">Manual template creation for each document type</span>
                     </li>
                     <li class="flex items-start space-x-3">
                         <i class="fas fa-times text-red-500 mt-1 flex-shrink-0"></i>
-                        <span>No learning capability or adaptation</span>
+                        <span data-translate="arch.comparison.traditional.point3">No learning capability or adaptation</span>
                     </li>
                     <li class="flex items-start space-x-3">
                         <i class="fas fa-times text-red-500 mt-1 flex-shrink-0"></i>
-                        <span>Complex implementation and maintenance</span>
+                        <span data-translate="arch.comparison.traditional.point4">Complex implementation and maintenance</span>
                     </li>
                 </ul>
             </div>
@@ -728,19 +728,19 @@
                 <ul class="space-y-3 text-gray-600">
                     <li class="flex items-start space-x-3">
                         <i class="fas fa-exclamation text-yellow-500 mt-1 flex-shrink-0"></i>
-                        <span>Black box decisions without explanations</span>
+                        <span data-translate="arch.comparison.simple.point1">Black box decisions without explanations</span>
                     </li>
                     <li class="flex items-start space-x-3">
                         <i class="fas fa-exclamation text-yellow-500 mt-1 flex-shrink-0"></i>
-                        <span>Hallucination risks in critical compliance</span>
+                        <span data-translate="arch.comparison.simple.point2">Hallucination risks in critical compliance</span>
                     </li>
                     <li class="flex items-start space-x-3">
                         <i class="fas fa-exclamation text-yellow-500 mt-1 flex-shrink-0"></i>
-                        <span>No regulatory knowledge integration</span>
+                        <span data-translate="arch.comparison.simple.point3">No regulatory knowledge integration</span>
                     </li>
                     <li class="flex items-start space-x-3">
                         <i class="fas fa-exclamation text-yellow-500 mt-1 flex-shrink-0"></i>
-                        <span>Limited accuracy on domain-specific tasks</span>
+                        <span data-translate="arch.comparison.simple.point4">Limited accuracy on domain-specific tasks</span>
                     </li>
                 </ul>
             </div>
@@ -753,19 +753,19 @@
                 <ul class="space-y-3 text-gray-600">
                     <li class="flex items-start space-x-3">
                         <i class="fas fa-check text-green-500 mt-1 flex-shrink-0"></i>
-                        <span>Explainable AI with full audit trails</span>
+                        <span data-translate="arch.comparison.ours.point1">Explainable AI with full audit trails</span>
                     </li>
                     <li class="flex items-start space-x-3">
                         <i class="fas fa-check text-green-500 mt-1 flex-shrink-0"></i>
-                        <span>Continuous learning from expert feedback</span>
+                        <span data-translate="arch.comparison.ours.point2">Continuous learning from expert feedback</span>
                     </li>
                     <li class="flex items-start space-x-3">
                         <i class="fas fa-check text-green-500 mt-1 flex-shrink-0"></i>
-                        <span>Deep regulatory knowledge integration</span>
+                        <span data-translate="arch.comparison.ours.point3">Deep regulatory knowledge integration</span>
                     </li>
                     <li class="flex items-start space-x-3">
                         <i class="fas fa-check text-green-500 mt-1 flex-shrink-0"></i>
-                        <span>Enterprise-grade accuracy and reliability</span>
+                        <span data-translate="arch.comparison.ours.point4">Enterprise-grade accuracy and reliability</span>
                     </li>
                 </ul>
             </div>

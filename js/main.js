@@ -190,6 +190,49 @@ const translations = {
         "comparison.simple.title": "Simple AI Wrappers",
         "comparison.ours.title": "TradeGuard AI",
         
+        // LLM Capabilities
+        "arch.llm.capability1": "Multi-domain fine-tuning on customs and trade datasets",
+        "arch.llm.capability2": "Context-aware entity extraction with 98.5% accuracy",
+        "arch.llm.capability3": "Semantic similarity matching for product classification",
+        "arch.llm.capability4": "Real-time regulation interpretation and mapping",
+        "arch.llm.metric1": "Entity Extraction Accuracy",
+        "arch.llm.metric2": "Supported Languages",
+        
+        // Multi-Modal AI Pipeline
+        "arch.multimodal.step1.title": "Image Preprocessing",
+        "arch.multimodal.step1.desc": "Noise reduction, skew correction, enhancement",
+        "arch.multimodal.step2.title": "Layout Detection",
+        "arch.multimodal.step2.desc": "Table identification, text blocks, form fields",
+        "arch.multimodal.step3.title": "Multi-Language OCR",
+        "arch.multimodal.step3.desc": "Character recognition with context awareness",
+        "arch.multimodal.step4.title": "Content Structuring",
+        "arch.multimodal.step4.desc": "Logical grouping and relationship mapping",
+        
+        // Knowledge Graph
+        "arch.kg.category1": "Products",
+        "arch.kg.category2": "Regulations",
+        "arch.kg.product1": "• HS Classification hierarchy",
+        "arch.kg.product2": "• Material compositions",
+        "arch.kg.product3": "• Manufacturing processes",
+        "arch.kg.regulation1": "• Tariff schedules",
+        "arch.kg.regulation2": "• Trade agreements",
+        "arch.kg.regulation3": "• Licensing requirements",
+        "arch.kg.metric1": "Entities & Relationships",
+        
+        // Architecture Comparison
+        "arch.comparison.traditional.point1": "Rule-based processing breaks with new formats",
+        "arch.comparison.traditional.point2": "Manual template creation for each document type",
+        "arch.comparison.traditional.point3": "No learning capability or adaptation",
+        "arch.comparison.traditional.point4": "Complex implementation and maintenance",
+        "arch.comparison.simple.point1": "Black box decisions without explanations",
+        "arch.comparison.simple.point2": "Hallucination risks in critical compliance",
+        "arch.comparison.simple.point3": "No regulatory knowledge integration",
+        "arch.comparison.simple.point4": "Limited accuracy on domain-specific tasks",
+        "arch.comparison.ours.point1": "Explainable AI with full audit trails",
+        "arch.comparison.ours.point2": "Continuous learning from expert feedback",
+        "arch.comparison.ours.point3": "Deep regulatory knowledge integration",
+        "arch.comparison.ours.point4": "Enterprise-grade accuracy and reliability",
+        
         "architecture.cta.title": "Experience Our Advanced AI Architecture",
         "architecture.cta.subtitle": "See how our triple-fusion AI technology transforms customs compliance. Schedule a technical deep-dive with our team.",
         "architecture.cta.demo": "Technical Demo",
@@ -607,7 +650,50 @@ const translations = {
         "architecture.advantages.subtitle": "了解我们的AI原生方法相对于传统系统和简单AI包装器的战略优势。",
         "comparison.traditional.title": "传统系统",
         "comparison.simple.title": "简单AI包装器",
-        "comparison.ours.title": "智能通关AI",
+        "comparison.ours.title": "贸易卫士AI",
+        
+        // LLM Capabilities
+        "arch.llm.capability1": "海关和贸易数据集的多领域微调",
+        "arch.llm.capability2": "具有98.5%准确率的上下文感知实体提取",
+        "arch.llm.capability3": "用于产品分类的语义相似性匹配",
+        "arch.llm.capability4": "实时法规解释和映射",
+        "arch.llm.metric1": "实体提取准确率",
+        "arch.llm.metric2": "支持的语言",
+        
+        // Multi-Modal AI Pipeline
+        "arch.multimodal.step1.title": "图像预处理",
+        "arch.multimodal.step1.desc": "噪声降低、倾斜校正、增强",
+        "arch.multimodal.step2.title": "布局检测",
+        "arch.multimodal.step2.desc": "表格识别、文本块、表单字段",
+        "arch.multimodal.step3.title": "多语言OCR",
+        "arch.multimodal.step3.desc": "具有上下文感知的字符识别",
+        "arch.multimodal.step4.title": "内容结构化",
+        "arch.multimodal.step4.desc": "逻辑分组和关系映射",
+        
+        // Knowledge Graph
+        "arch.kg.category1": "产品",
+        "arch.kg.category2": "法规",
+        "arch.kg.product1": "• HS分类层次结构",
+        "arch.kg.product2": "• 材料成分",
+        "arch.kg.product3": "• 制造工艺",
+        "arch.kg.regulation1": "• 关税表",
+        "arch.kg.regulation2": "• 贸易协定",
+        "arch.kg.regulation3": "• 许可要求",
+        "arch.kg.metric1": "实体与关系",
+        
+        // Architecture Comparison
+        "arch.comparison.traditional.point1": "基于规则的处理在新格式下失效",
+        "arch.comparison.traditional.point2": "为每种文档类型手动创建模板",
+        "arch.comparison.traditional.point3": "无学习能力或适应性",
+        "arch.comparison.traditional.point4": "复杂的实施和维护",
+        "arch.comparison.simple.point1": "没有解释的黑盒决策",
+        "arch.comparison.simple.point2": "关键合规中的幻觉风险",
+        "arch.comparison.simple.point3": "无法规知识集成",
+        "arch.comparison.simple.point4": "特定领域任务准确性有限",
+        "arch.comparison.ours.point1": "具有完整审计跟踪的可解释AI",
+        "arch.comparison.ours.point2": "从专家反馈中持续学习",
+        "arch.comparison.ours.point3": "深度法规知识集成",
+        "arch.comparison.ours.point4": "企业级准确性和可靠性",
         
         "architecture.cta.title": "体验我们的先进AI架构",
         "architecture.cta.subtitle": "了解我们的三重融合AI技术如何转变海关合规。与我们的团队安排技术深入了解。",
@@ -1026,7 +1112,50 @@ const translations = {
         "architecture.advantages.subtitle": "従来システムとシンプルなAIラッパーに対するAIネイティブアプローチの戦略的優位性を理解。",
         "comparison.traditional.title": "従来システム",
         "comparison.simple.title": "シンプルAIラッパー",
-        "comparison.ours.title": "スマートクリアランスAI",
+        "comparison.ours.title": "トレードガードAI",
+        
+        // LLM Capabilities
+        "arch.llm.capability1": "税関・貿易データセットでのマルチドメインファインチューニング",
+        "arch.llm.capability2": "98.5%精度のコンテキスト認識エンティティ抽出",
+        "arch.llm.capability3": "製品分類のための意味的類似性マッチング",
+        "arch.llm.capability4": "リアルタイム規制解釈とマッピング",
+        "arch.llm.metric1": "エンティティ抽出精度",
+        "arch.llm.metric2": "サポート言語数",
+        
+        // Multi-Modal AI Pipeline
+        "arch.multimodal.step1.title": "画像前処理",
+        "arch.multimodal.step1.desc": "ノイズ低減、傾き補正、拡張",
+        "arch.multimodal.step2.title": "レイアウト検出",
+        "arch.multimodal.step2.desc": "テーブル識別、テキストブロック、フォームフィールド",
+        "arch.multimodal.step3.title": "多言語OCR",
+        "arch.multimodal.step3.desc": "コンテキスト認識による文字認識",
+        "arch.multimodal.step4.title": "コンテンツ構造化",
+        "arch.multimodal.step4.desc": "論理的グループ化と関係マッピング",
+        
+        // Knowledge Graph
+        "arch.kg.category1": "製品",
+        "arch.kg.category2": "規制",
+        "arch.kg.product1": "• HS分類階層",
+        "arch.kg.product2": "• 材料組成",
+        "arch.kg.product3": "• 製造プロセス",
+        "arch.kg.regulation1": "• 関税スケジュール",
+        "arch.kg.regulation2": "• 貿易協定",
+        "arch.kg.regulation3": "• ライセンス要件",
+        "arch.kg.metric1": "エンティティと関係",
+        
+        // Architecture Comparison
+        "arch.comparison.traditional.point1": "新しいフォーマットでルールベース処理が破綻",
+        "arch.comparison.traditional.point2": "各文書タイプの手動テンプレート作成",
+        "arch.comparison.traditional.point3": "学習能力や適応性なし",
+        "arch.comparison.traditional.point4": "複雑な実装と保守",
+        "arch.comparison.simple.point1": "説明のないブラックボックス決定",
+        "arch.comparison.simple.point2": "重要なコンプライアンスでの幻覚リスク",
+        "arch.comparison.simple.point3": "規制知識統合なし",
+        "arch.comparison.simple.point4": "ドメイン固有タスクでの限定精度",
+        "arch.comparison.ours.point1": "完全監査証跡付き説明可能AI",
+        "arch.comparison.ours.point2": "専門家フィードバックからの継続学習",
+        "arch.comparison.ours.point3": "深い規制知識統合",
+        "arch.comparison.ours.point4": "企業グレードの精度と信頼性",
         
         "architecture.cta.title": "高度AIアーキテクチャを体験",
         "architecture.cta.subtitle": "トリプル融合AI技術が税関コンプライアンスをどのように変革するかをご覧ください。チームとの技術深掘りをスケジュール。",
@@ -1446,6 +1575,49 @@ const translations = {
         "comparison.traditional.title": "Hệ thống truyền thống",
         "comparison.simple.title": "Bộ bao bọc AI đơn giản",
         "comparison.ours.title": "TradeGuard AI",
+        
+        // LLM Capabilities
+        "arch.llm.capability1": "Tinh chỉnh đa lĩnh vực trên bộ dữ liệu hải quan và thương mại",
+        "arch.llm.capability2": "Trích xuất thực thể nhận biết ngữ cảnh với độ chính xác 98.5%",
+        "arch.llm.capability3": "Khớp tương đồng ngữ nghĩa cho phân loại sản phẩm",
+        "arch.llm.capability4": "Giải thích và ánh xạ quy định theo thời gian thực",
+        "arch.llm.metric1": "Độ chính xác trích xuất thực thể",
+        "arch.llm.metric2": "Ngôn ngữ được hỗ trợ",
+        
+        // Multi-Modal AI Pipeline
+        "arch.multimodal.step1.title": "Tiền xử lý hình ảnh",
+        "arch.multimodal.step1.desc": "Giảm nhiễu, hiệu chỉnh độ nghiêng, cải thiện",
+        "arch.multimodal.step2.title": "Phát hiện bố cục",
+        "arch.multimodal.step2.desc": "Nhận dạng bảng, khối văn bản, trường biểu mẫu",
+        "arch.multimodal.step3.title": "OCR đa ngôn ngữ",
+        "arch.multimodal.step3.desc": "Nhận dạng ký tự với nhận biết ngữ cảnh",
+        "arch.multimodal.step4.title": "Cấu trúc nội dung",
+        "arch.multimodal.step4.desc": "Nhóm logic và ánh xạ mối quan hệ",
+        
+        // Knowledge Graph
+        "arch.kg.category1": "Sản phẩm",
+        "arch.kg.category2": "Quy định",
+        "arch.kg.product1": "• Cấu trúc phân loại HS",
+        "arch.kg.product2": "• Thành phần vật liệu",
+        "arch.kg.product3": "• Quy trình sản xuất",
+        "arch.kg.regulation1": "• Biểu thuế",
+        "arch.kg.regulation2": "• Hiệp định thương mại",
+        "arch.kg.regulation3": "• Yêu cầu cấp phép",
+        "arch.kg.metric1": "Thực thể & Mối quan hệ",
+        
+        // Architecture Comparison
+        "arch.comparison.traditional.point1": "Xử lý dựa trên quy tắc bị hỏng với định dạng mới",
+        "arch.comparison.traditional.point2": "Tạo mẫu thủ công cho từng loại tài liệu",
+        "arch.comparison.traditional.point3": "Không có khả năng học hoặc thích ứng",
+        "arch.comparison.traditional.point4": "Triển khai và bảo trì phức tạp",
+        "arch.comparison.simple.point1": "Quyết định hộp đen không có giải thích",
+        "arch.comparison.simple.point2": "Rủi ro ảo giác trong tuân thủ quan trọng",
+        "arch.comparison.simple.point3": "Không tích hợp kiến thức quy định",
+        "arch.comparison.simple.point4": "Độ chính xác hạn chế trong các tác vụ cụ thể",
+        "arch.comparison.ours.point1": "AI có thể giải thích với đường dẫn kiểm toán đầy đủ",
+        "arch.comparison.ours.point2": "Học tập liên tục từ phản hồi chuyên gia",
+        "arch.comparison.ours.point3": "Tích hợp kiến thức quy định sâu",
+        "arch.comparison.ours.point4": "Độ chính xác và độ tin cậy cấp doanh nghiệp",
         
         "architecture.cta.title": "Trải nghiệm kiến trúc AI tiên tiến của chúng tôi",
         "architecture.cta.subtitle": "Xem cách công nghệ AI kết hợp ba của chúng tôi chuyển đổi tuân thủ hải quan. Lên lịch tìm hiểu sâu kỹ thuật với đội ngũ của chúng tôi.",
